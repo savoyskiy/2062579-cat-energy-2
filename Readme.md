@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Александр Кузнецов](https://up.htmlacademy.ru/adaptive-individual/2/user/2062579).
-* Наставник: [андрей Грачев](https://htmlacademy.ru/profile/angra).
+* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
 
 ---
 
