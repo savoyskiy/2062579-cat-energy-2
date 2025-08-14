@@ -6,6 +6,10 @@
   <title>Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple_180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -40,7 +44,11 @@
     <section class="main-page__hero hero">
       <h2 class="hero__header">Функциональное питание для котов</h2>
       <p class="hero__slogan">Занялся собой? Займись котом!</p>
-      <img src="#" width="280" height="270" alt="Питание для котов.">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/index/hero_desktop@1x.png 1x, images/index/hero_desktop@2x.png 2x" type="image/png" width="552" height="499">
+        <source media="(min-width: 768px)" srcset="images/index/hero_tablet@1x.png 1x, images/index/hero_tablet@2x.png 2x" type="image/png" width="709" height="609">
+        <img src="images/index/hero_mobile@1x.png" srcset="images/index/hero_mobile@2x.png 2x" width="280" height="270" alt="Питание для котов.">
+      </picture>
       <a class="hero__button button" href="#">Подобрать программу</a>
     </section>
 
@@ -91,7 +99,21 @@
       <p class="example__costs">Затраты на питание: 15 000 руб.</p>
 
       <div class="example__slider">
-        <!-- здесь будет слайдер -->
+        <div class="example__before">
+          <picture>
+            <source media="(min-width: 768px)" srcset="images/index/cat_fat_tablet@1x.png 1x, images/index/cat_fat_tablet@2x.png 2x" type="image/png" width="560" height="512">
+            <img src="images/index/cat_fat_mobile@1x.png" srcset="images/index/cat_fat_mobile@2x.png 2x" width="280" height="256" alt="Толстый кот до программы.">
+          </picture>
+        </div>
+        <div class="example__after">
+          <picture>
+            <source media="(min-width: 768px)" srcset="images/index/cat_skinny_tablet@1x.png 1x, images/index/cat_skinny_tablet@2x.png 2x" type="image/png" width="560" height="512">
+            <img src="images/index/cat_skinny_mobile@1x.png" srcset="images/index/cat_skinny_mobile@2x.png 2x" width="280" height="256" alt="Худой кот после программы.">
+          </picture>
+        </div>
+        <div class="example__divider">
+          <!-- здесь будет разделитель слайдера -->
+        </div>
       </div>
     </section>
   </main>
