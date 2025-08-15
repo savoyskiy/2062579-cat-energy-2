@@ -2,6 +2,37 @@
 @import "./common/variables.scss";
 @import "./common/global.scss";
 @import "./common/fonts.scss";
+@import "./common/button.scss";
+@import "./common/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+/* HEADER */
+@import "./blocks/page.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/site-navigation.scss";
+
+/* MAIN */
+@import "./blocks/main.scss";
+@import "./blocks/main-page.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/programms.scss";
+@import "./blocks/programm-version.scss";
+@import "./blocks/how-it-works.scss";
+@import "./blocks/example.scss";
+@import "./blocks/statistic.scss";
+
+/* CATALOG */
+@import "./blocks/catalog.scss";
+@import "./blocks/main-goods.scss";
+@import "./blocks/good-card.scss";
+@import "./blocks/good-specifications.scss";
+@import "./blocks/good-other.scss";
+@import "./blocks/additional-goods.scss";
+@import "./blocks/additional-good-card.scss";
+@import "./blocks/actions-and-news.scss";
+
+/* FOOTER */
+@import "./blocks/main-footer.scss";
+@import "./blocks/cooperation.scss";
+@import "./blocks/social-list.scss";
+
