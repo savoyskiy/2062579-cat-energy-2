@@ -1,0 +1,26 @@
+.hero {
+  background-color: #68b738;
+}
+
+.hero__header {
+  font-family: $main-header;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.hero__slogan {
+  font-family: $main-header;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.hero__button {
+  font-family: $main-header;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
