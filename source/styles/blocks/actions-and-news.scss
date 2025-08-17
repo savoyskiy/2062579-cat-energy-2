@@ -1,0 +1,33 @@
+.actions-and-news__header {
+  font-family: $main-header;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.actions-and-news__text {
+  font-family: $main-header;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.actions-and-news__email-input {
+  font-family: $main-header;
+  font-size: 20px;
+  line-height: 20px;
+  color: #444444;
+  text-transform: uppercase;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.actions-and-news__button {
+  font-family: $main-header;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68b738;
+}

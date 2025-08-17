@@ -1,7 +1,16 @@
+.cooperation {
+  background-color: #ffffff;
+
+  &--grey {
+    background-color: #f2f2f2;
+  }
+}
+
 .cooperation__header {
   font-family: $main-header;
   font-weight: 400;
   font-size: 16px;
+  color: #111111;
   line-height: 20px;
   text-transform: uppercase;
 }

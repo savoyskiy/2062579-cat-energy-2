@@ -1,0 +1,38 @@
+.additional-good-card__header-link {
+  text-decoration: none;
+}
+
+.additional-good-card__header {
+  font-family: $main-header;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.additional-good-card__description {
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}
+
+.additional-good-card__button {
+  font-family: $main-header;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #68b738;
+}
+
+.additional-goods__gift {
+  background-color: #68b738;
+}
+
+.additional-goods__gift-description {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
