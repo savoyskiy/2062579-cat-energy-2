@@ -15,7 +15,7 @@
   font-family: $main-header;
   font-size: 20px;
   line-height: 20px;
-  color: #444444;
+  color: $text-color-main;
   text-transform: uppercase;
 
   &::placeholder {

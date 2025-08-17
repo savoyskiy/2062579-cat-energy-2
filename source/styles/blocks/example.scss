@@ -1,5 +1,5 @@
 .example {
-  background-color: #eaeaea;
+  background-color: $background-color-threety;
 }
 
 .example__header {
@@ -10,7 +10,7 @@
 }
 
 .example__description {
-  color: #444444;
+  color: $text-color-main;
 }
 
 .example__costs {

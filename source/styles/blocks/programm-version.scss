@@ -1,5 +1,5 @@
 .programm-version {
-  background-color: #f2f2f2;
+  background-color: $background-color-secondary;
 }
 
 .programm-version__header {
@@ -11,7 +11,7 @@
 }
 
 .programm-version__description {
-  color: #444444;
+  color: $text-color-main;
 }
 
 .programm-version__link {

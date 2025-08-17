@@ -1,8 +1,8 @@
 .cooperation {
-  background-color: #ffffff;
+  background-color: $background-color-main;
 
   &--grey {
-    background-color: #f2f2f2;
+    background-color: $background-color-secondary;
   }
 }
 
@@ -10,7 +10,7 @@
   font-family: $main-header;
   font-weight: 400;
   font-size: 16px;
-  color: #111111;
+  color: $text-color-thtreety;
   line-height: 20px;
   text-transform: uppercase;
 }
@@ -18,5 +18,5 @@
 .cooperation__address {
   font-size: 14px;
   line-height: 20px;
-  color: #444444;
+  color: $text-color-main;
 }
