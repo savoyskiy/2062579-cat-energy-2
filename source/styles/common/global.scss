@@ -1,1 +1,8 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+body {
+  font-family: $main-text;
+  font-size: 14px;
+  line-height: 18px;
+  color: $header-color-main;
+  background-color: $background-color-main;
+}

@@ -1,0 +1,21 @@
+.good-other__header {
+  font-family: $main-header;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-color-thtreety;
+  text-transform: uppercase;
+}
+
+.good-other__text {
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-color-main;
+}
+
+.good-other__button {
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-color-main;
+  background-color: $background-color-secondary;
+}

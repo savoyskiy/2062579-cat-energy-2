@@ -1,0 +1,21 @@
+.example {
+  background-color: $background-color-threety;
+}
+
+.example__header {
+  font-family: $main-header;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.example__description {
+  color: $text-color-main;
+}
+
+.example__costs {
+  font-family: $main-header;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
