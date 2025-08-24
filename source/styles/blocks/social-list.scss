@@ -1,0 +1,26 @@
+.social-list__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+  background-color: $background-color-fourty;
+
+  &:hover {
+    background-color: $theme-color;
+  }
+
+  &:active {
+    background-color: $background-color-fourty-active;
+  }
+
+  &--vk {
+    mask-image: url("../../icons/social_vk.svg");
+  }
+
+  &--youtube {
+    mask-image: url("../../icons/social_youtube.svg");
+  }
+
+  &--telegram {
+    mask-image: url("../../icons/social_telegram.svg");
+  }
+}

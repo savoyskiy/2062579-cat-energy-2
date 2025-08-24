@@ -16,7 +16,16 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__link" href="index.html">
-      <img class="main-header__logo" src="#" width="33" height="38" alt="Логотип сайта Cat Energy.">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" type="image/svg+xml" width="174" height="50">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml" width="174" height="50">
+        <img class="main-header__logo" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип сайта Cat Energy.">
+      </picture>
+    </a>
+
+    <!-- В мобильной версии вынес название в отдельный элемент, чтобы оно центрировалось на ширине от 320 до 768 рх, в планшетном и десктопном вариантах не отображается, там название объединено с логотипом -->
+    <a class="main-header__text-logo-link" href="index.html">
+      <img class="main-header__text-logo" src="images/logo_text.svg" width="101" height="18" alt="Название сайта Cat Energy.">
     </a>
 
     <nav class="main-header__navigation site-navigation">
@@ -328,30 +337,30 @@
 
     <div class="main-footer__wrapper">
       <a class="main-footer__link" href="index.html">
-        <img class="main-footer__logo" src="#" width="128" height="24" alt="Логотип сайта Cat Energy.">
+        <img class="main-footer__logo" src="images/logo_2.svg" width="128" height="24" alt="Логотип сайта Cat Energy.">
       </a>
 
       <ul class="main-footer__social social-list">
         <li class="social-list__item">
-          <a class="social-list__link" href="#">
+          <a class="social-list__link social-list__link--vk" href="#">
             <span class="social-list__link-description visually-hidden">VK</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#">
+          <a class="social-list__link social-list__link--youtube" href="#">
             <span class="social-list__link-description visually-hidden">YouTube</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#">
-            <span class="social-list__link-description visually-hidden">Telegramm</span>
+          <a class="social-list__link social-list__link--telegram" href="#">
+            <span class="social-list__link-description visually-hidden">Telegram</span>
           </a>
         </li>
       </ul>
 
       <a class="main-footer__htmlacademy htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="htmlacademy__text">HTML Academy</span>
-        <img class="htmlacademy__logo" src="#" width="27" height="34" alt="Логотип сайта HTML Academy.">
+        <img class="htmlacademy__logo" src="images/htmlacademy_logo.svg" width="27" height="34" alt="Логотип сайта HTML Academy.">
       </a>
     </div>
   </footer>

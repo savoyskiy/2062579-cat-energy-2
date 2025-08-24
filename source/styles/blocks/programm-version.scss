@@ -1,5 +1,16 @@
 .programm-version {
   background-color: $background-color-secondary;
+  // background-image: url("../../../build/icons/stack.svg#programm_cat_slim");
+
+  &--slim {
+    background-image: url("../../icons/programm_cat_slim.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--pro {
+    background-image: url("../../icons/programm_cat_pro.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .programm-version__header {
@@ -15,10 +26,19 @@
 }
 
 .programm-version__link {
+  padding-right: 37px;
   font-family: $main-header;
   font-size: 16px;
   line-height: 16px;
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
+  background-image: url("../../icons/programm_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 24px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
