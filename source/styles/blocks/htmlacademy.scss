@@ -1,9 +1,27 @@
 .htmlacademy {
   text-decoration: none;
+
+  &:hover .htmlacademy__text::after {
+    background-color: $theme-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .htmlacademy__text {
+  display: flex;
   font-size: 16px;
   line-height: 20px;
   color: $text-color-main;
+
+  &::after {
+    content: "";
+    background-color: $text-color-main;
+    mask-image: url("../../icons/stack.svg#htmlacademy_logo");
+    display: block;
+    width: 28px;
+    height: 34px;
+  }
 }

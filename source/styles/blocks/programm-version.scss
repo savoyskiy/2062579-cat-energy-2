@@ -3,12 +3,12 @@
   // background-image: url("../../../build/icons/stack.svg#programm_cat_slim");
 
   &--slim {
-    background-image: url("../../icons/programm_cat_slim.svg");
+    background-image: url("../../icons/stack.svg#programm_cat_slim");
     background-repeat: no-repeat;
   }
 
   &--pro {
-    background-image: url("../../icons/programm_cat_pro.svg");
+    background-image: url("../../icons/stack.svg#programm_cat_pro");
     background-repeat: no-repeat;
   }
 }
@@ -33,7 +33,7 @@
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
-  background-image: url("../../icons/programm_arrow.svg");
+  background-image: url("../../icons/stack.svg#programm_arrow");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 24px;

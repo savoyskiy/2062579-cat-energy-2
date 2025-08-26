@@ -13,22 +13,22 @@
   background-position: center;
 
   &--leaf {
-    background-image: url("../../icons/work_leaf.svg");
+    background-image: url("../../icons/stack.svg#work_leaf");
     background-size: 30px;
   }
 
   &--boil {
-    background-image: url("../../icons/work_boil.svg");
+    background-image: url("../../icons/stack.svg#work_boil");
     background-size: 26px;
   }
 
   &--eat {
-    background-image: url("../../icons/work_eat.svg");
+    background-image: url("../../icons/stack.svg#work_eat");
     background-size: 25px;
   }
 
   &--clock {
-    background-image: url("../../icons/work_clock.svg");
+    background-image: url("../../icons/stack.svg#work_clock");
     background-size: 26px;
   }
 }
