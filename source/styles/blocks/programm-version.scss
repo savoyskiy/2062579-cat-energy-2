@@ -1,6 +1,5 @@
 .programm-version {
   background-color: $background-color-secondary;
-  // background-image: url("../../../build/icons/stack.svg#programm_cat_slim");
 
   &--slim {
     background-image: url("../../icons/stack.svg#programm_cat_slim");
@@ -26,6 +25,7 @@
 }
 
 .programm-version__link {
+  position: relative;
   padding-right: 37px;
   font-family: $main-header;
   font-size: 16px;
@@ -33,10 +33,23 @@
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
-  background-image: url("../../icons/stack.svg#programm_arrow");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 0;
+    display: block;
+    width: 32px;
+    height: 10px;
+    background-image: url("../../icons/stack.svg#programm_arrow");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  &:hover::after {
+    background-image: url("../../icons/stack.svg#programm_arrow-hover");
+  }
 
   &:active {
     opacity: 0.3;

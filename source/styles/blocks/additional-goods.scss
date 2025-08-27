@@ -8,8 +8,8 @@
 .additional-goods__gift {
   min-height: 290px;
   background-color: $theme-color;
-  background-image: url("../../icons/stack.svg#gift_icon");
-  background-size: 78px;
+  background-image: url("../../icons/stack.svg#gift_icon"), url("../../images/catalog/gift-mobile@2x.jpg");
+  background-size: 78px, contain;
   background-repeat: no-repeat;
   background-position: center;
 }
