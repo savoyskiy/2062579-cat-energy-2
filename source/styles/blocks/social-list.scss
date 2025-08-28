@@ -1,0 +1,29 @@
+.social-list__link {
+  &::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    background-color: $background-color-fourty;
+  }
+
+  &:hover::before {
+    background-color: $theme-color;
+  }
+
+  &:active::before {
+    background-color: $background-color-fourty-active;
+  }
+
+  &--vk::before {
+    mask-image: url("../../icons/stack.svg#social_vk");
+  }
+
+  &--youtube::before {
+    mask-image: url("../../icons/stack.svg#social_youtube");
+  }
+
+  &--telegram::before {
+    mask-image: url("../../icons/stack.svg#social_telegram");
+  }
+}

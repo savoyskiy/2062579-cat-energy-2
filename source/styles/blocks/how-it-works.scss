@@ -5,6 +5,44 @@
   line-height: 40px;
 }
 
-.how-it-works__text {
+.how-it-works__item {
   color: $text-color-main;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $theme-color;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--leaf {
+    &::before {
+      background-image: url("../../icons/stack.svg#work_leaf");
+      background-size: 30px;
+    }
+  }
+
+  &--boil {
+    &::before {
+      background-image: url("../../icons/stack.svg#work_boil");
+      background-size: 26px;
+    }
+  }
+
+  &--eat {
+    &::before {
+      background-image: url("../../icons/stack.svg#work_eat");
+      background-size: 25px;
+    }
+  }
+
+  &--clock {
+    &::before {
+      background-image: url("../../icons/stack.svg#work_clock");
+      background-size: 26px;
+    }
+  }
 }
