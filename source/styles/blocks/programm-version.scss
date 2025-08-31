@@ -1,13 +1,32 @@
 .programm-version {
+  position: relative;
   background-color: $background-color-secondary;
 
-  &--slim {
-    background-image: url("../../icons/stack.svg#programm_cat_slim");
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 150px;
+    display: block;
+  }
+
+  &--slim::before {
+    width: 50px;
+    height: 54px;
+    background: url("../../icons/stack.svg#cat-slim"), radial-gradient(circle at center, $theme-color 25px, $background-color-secondary 25px);
+    background-position-y: -2px, 1px;
+    background-position-x: center;
+    background-size: 36px, 50px;
     background-repeat: no-repeat;
   }
 
-  &--pro {
-    background-image: url("../../icons/stack.svg#programm_cat_pro");
+  &--pro::before {
+    width: 67px;
+    height: 50px;
+    background: url("../../icons/stack.svg#cat-pro"), radial-gradient(circle at center, $theme-color 25px, $background-color-secondary 25px);
+    background-position-y: center;
+    background-position-x: center;
+    background-size: 66px, 50px;
     background-repeat: no-repeat;
   }
 }
