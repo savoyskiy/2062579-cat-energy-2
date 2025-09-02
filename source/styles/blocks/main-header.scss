@@ -1,5 +1,37 @@
-@media (min-width: 768px) {
-  .main-header__text-logo-link {
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 13px 21px 14px 20px;
+
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
+    padding: 25px 34px 25px 30px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 55px 110px 29px;
+  }
+}
+
+.main-header__link {
+  margin: 0 auto 0 0;
+}
+
+.main-header__navigation {
+  order: 3;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: auto;
+  }
+}
+
+.main-header__button {
+  width: 24px;
+  height: 24px;
+
+  @media (min-width: 768px) {
     display: none;
   }
 }

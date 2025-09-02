@@ -43,16 +43,18 @@
   </header>
 
   <main class="main main-page">
-    <h1 class="main-page__header">Сайт питания для котов Cat Energy</h1>
+    <h1 class="main-page__header visually-hidden">Сайт питания для котов Cat Energy</h1>
 
     <section class="main-page__hero hero">
       <h2 class="hero__header">Функциональное питание для котов</h2>
       <p class="hero__slogan">Занялся собой? Займись котом!</p>
-      <picture>
-        <source media="(min-width: 1440px)" srcset="images/index/hero_desktop@1x.png 1x, images/index/hero_desktop@2x.png 2x" type="image/png" width="552" height="499">
-        <source media="(min-width: 768px)" srcset="images/index/hero_tablet@1x.png 1x, images/index/hero_tablet@2x.png 2x" type="image/png" width="709" height="609">
-        <img src="images/index/hero_mobile@1x.png" srcset="images/index/hero_mobile@2x.png 2x" width="280" height="270" alt="Питание для котов.">
-      </picture>
+      <div class="hero__picture-wrapper">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/index/hero_desktop@1x.png 1x, images/index/hero_desktop@2x.png 2x" type="image/png" width="552" height="499">
+          <source media="(min-width: 768px)" srcset="images/index/hero_tablet@1x.png 1x, images/index/hero_tablet@2x.png 2x" type="image/png" width="709" height="609">
+          <img src="images/index/hero_mobile@1x.png" srcset="images/index/hero_mobile@2x.png 2x" width="280" height="270" alt="Питание для котов.">
+        </picture>
+      </div>
       <a class="hero__button button" href="#">Подобрать программу</a>
     </section>
 
