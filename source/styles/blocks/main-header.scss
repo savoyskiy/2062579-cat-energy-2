@@ -4,12 +4,12 @@
   align-items: center;
   padding: 13px 21px 14px 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     flex-wrap: nowrap;
     padding: 25px 34px 25px 30px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     padding: 55px 110px 29px;
   }
 }
@@ -22,7 +22,7 @@
   order: 3;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: auto;
   }
 }
@@ -31,7 +31,7 @@
   width: 24px;
   height: 24px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }

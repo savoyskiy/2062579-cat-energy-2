@@ -1,0 +1,29 @@
+.programms {
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 82px 110px 71px;
+  }
+}
+
+.programms__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    column-gap: 80px;
+  }
+}

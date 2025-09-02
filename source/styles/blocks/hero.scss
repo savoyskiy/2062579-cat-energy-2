@@ -4,7 +4,7 @@
   align-items: center;
   background-color: $theme-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-rows: min-content min-content min-content;
     grid-template-columns: auto;
@@ -12,7 +12,7 @@
     background-color: $background-color-main;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     grid-template-columns: 416px auto;
     padding: 0 0 52px 190px;
   }
@@ -26,7 +26,7 @@
   font-weight: 400;
   color: $header-color-invert;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 416px;
     padding-left: 90px;
     text-align: start;
@@ -35,7 +35,7 @@
     color: $header-color-main;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     padding-left: 0;
   }
 }
@@ -47,7 +47,7 @@
   color: $header-color-invert;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     padding-left: 90px;
     font-size: 20px;
@@ -55,26 +55,26 @@
     color: $header-color-main;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
     padding-left: 0;
   }
 }
 
 .hero__picture-wrapper {
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     grid-row: 3 / 4;
     grid-column: 1 / -1;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     grid-row: 1 / -1;
     grid-column: 2 / -1;
   }
 }
 
 .hero__button {
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     grid-row: 3 / 4;
     grid-column: 1 / -1;
     align-self: start;
@@ -82,7 +82,7 @@
     width: 242px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
     margin-left: 0;
   }

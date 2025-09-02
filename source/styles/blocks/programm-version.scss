@@ -1,16 +1,28 @@
 .programm-version {
   position: relative;
+  padding: 30px 20px 18px;
   background-color: $background-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 316px 53px 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 457px;
+    padding: 77px 61px 55px 52px;
+  }
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 150px;
+    left: 0;
     display: block;
   }
 
   &--slim::before {
+    top: 21px;
+    left: 20px;
     width: 50px;
     height: 54px;
     background: url("../../icons/stack.svg#cat-slim"), radial-gradient(circle at center, $theme-color 25px, $background-color-secondary 25px);
@@ -18,9 +30,37 @@
     background-position-x: center;
     background-size: 36px, 50px;
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 81px;
+      left: auto;
+      right: 63px;
+      width: 200px;
+      height: 211px;
+      background: url("../../icons/stack.svg#cat-slim"), radial-gradient(circle at center, $theme-color 100px, $background-color-secondary 100px);
+      background-position-y: -8px, 5px;
+      background-position-x: center;
+      background-size: 140px, 200px;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 41px;
+      left: 52px;
+      right: auto;
+      width: 100px;
+      height: 106px;
+      background: url("../../icons/stack.svg#cat-slim"), radial-gradient(circle at center, $theme-color 50px, $background-color-secondary 50px);
+      background-position-y: -5px, 0;
+      background-position-x: center;
+      background-size: 70px, 100px;
+      background-repeat: no-repeat;
+    }
   }
 
   &--pro::before {
+    top: 24px;
+    left: 13px;
     width: 67px;
     height: 50px;
     background: url("../../icons/stack.svg#cat-pro"), radial-gradient(circle at center, $theme-color 25px, $background-color-secondary 25px);
@@ -28,19 +68,70 @@
     background-position-x: center;
     background-size: 66px, 50px;
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 91px;
+      left: auto;
+      right: 29px;
+      width: 268px;
+      height: 200px;
+      background: url("../../icons/stack.svg#cat-pro"), radial-gradient(circle at center, $theme-color 100px, $background-color-secondary 100px);
+      background-position-y: center;
+      background-position-x: center;
+      background-size: 268px, 200px;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 47px;
+      left: 33px;
+      right: auto;
+      width: 134px;
+      height: 100px;
+      background: url("../../icons/stack.svg#cat-pro"), radial-gradient(circle at center, $theme-color 50px, $background-color-secondary 50px);
+      background-position-y: center;
+      background-position-x: center;
+      background-size: 134px, 100px;
+      background-repeat: no-repeat;
+    }
   }
 }
 
 .programm-version__header {
+  margin: 0 0 29px;
+  padding: 0 0 0 90px;
   font-family: $main-header;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 24px;
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 73px;
+    padding: 0 0 0 214px;
+  }
 }
 
 .programm-version__description {
+  margin: 0 0 38px;
   color: $text-color-main;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 23px;
+  }
 }
 
 .programm-version__link {
@@ -72,5 +163,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
