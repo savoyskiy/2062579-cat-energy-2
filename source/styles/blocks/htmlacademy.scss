@@ -1,5 +1,13 @@
 .htmlacademy {
+  display: block;
+  width: 280px;
+  padding: 20px 0;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    padding: 0 0 0 5px;
+  }
 
   &:hover .htmlacademy__text::after {
     background-color: $theme-color;
@@ -11,13 +19,18 @@
 }
 
 .htmlacademy__text {
+  position: relative;
   display: flex;
+  padding: 7px 0;
   font-size: 16px;
   line-height: 20px;
   color: $text-color-main;
 
   &::after {
     content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: $text-color-main;
     mask-image: url("../../icons/stack.svg#htmlacademy_logo");
     display: block;
