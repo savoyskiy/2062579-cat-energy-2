@@ -1,16 +1,58 @@
 .example {
+  padding: 25px 20px 40px;
   background-color: $background-color-threety;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: min-content min-content min-content min-content;
+    padding: 0 30px 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px 75px;
+  }
 }
 
 .example__header {
+  margin: 0 0 40px;
   font-family: $main-header;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    margin: 0 0 60px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+  }
 }
 
 .example__description {
+  margin: 0 0 20px;
   color: $text-color-main;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    margin: 0 0 55px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+  }
+}
+
+.example__list {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+  }
 }
 
 .example__costs {
@@ -18,4 +60,26 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    text-align: start;
+  }
+}
+
+.example__slider {
+  @media (min-width: $tablet-width) {
+    justify-self: center;
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
 }
