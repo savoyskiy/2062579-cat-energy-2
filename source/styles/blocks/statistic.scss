@@ -1,3 +1,12 @@
+.statistic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .statistic__data {
   font-family: $main-header;
   font-weight: 400;

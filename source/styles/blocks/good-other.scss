@@ -1,3 +1,22 @@
+.good-other {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 280px;
+  padding: 78px 20px 24px;
+
+  @media (min-width: $tablet-width) {
+    min-width: auto;
+    width: 250px;
+    padding: 160px 37px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 171px;
+    padding: 150px 37px 40px;
+  }
+}
+
 .good-other__header {
   font-family: $main-header;
   font-weight: 400;
@@ -5,12 +24,22 @@
   line-height: 20px;
   color: $text-color-threety;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .good-other__text {
   font-size: 12px;
   line-height: 16px;
   color: $text-color-main;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .good-other__button {
