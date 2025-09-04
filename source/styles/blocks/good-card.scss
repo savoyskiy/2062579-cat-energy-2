@@ -1,8 +1,70 @@
+.good-card {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: auto 14px auto 17px auto;
+  padding: 20px 20px 25px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    padding: 0 37px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 38px 40px;
+  }
+}
+
+.good-card__image-link {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    padding: 10px 25px 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 10px 0 12px;
+  }
+}
+
 .good-card__header-link {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.good-card__specifications-list {
+  grid-column: 2 / -1;
+  grid-row: 3 / 4;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 37px;
+  }
 }
 
 .good-card__header {
+  margin: 0;
   font-family: $main-header;
   font-weight: 400;
   font-size: 16px;
@@ -12,6 +74,13 @@
 }
 
 .good-card__button {
+  grid-column: 1 / -1;
+  grid-row: 5 / -1;
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 4 / -1;
+  }
 }
