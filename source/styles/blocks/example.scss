@@ -1,6 +1,9 @@
 .example {
-  padding: 25px 20px 40px;
   background-color: $background-color-threety;
+}
+
+.example__data-wrapper {
+  padding: 25px 20px 40px;
 
   @media (min-width: $tablet-width) {
     display: grid;

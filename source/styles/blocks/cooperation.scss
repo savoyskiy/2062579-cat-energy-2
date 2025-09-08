@@ -7,12 +7,22 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+.cooperation__wrapper {
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    display: grid;
     grid-template-columns: 110px 1fr;
     grid-template-rows: 95px 1fr;
   }
 }
 
-.cooperation__wrapper {
+.cooperation__text-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 26px 20px;
