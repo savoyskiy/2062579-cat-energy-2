@@ -4,4 +4,11 @@
     width: 1220px;
     margin: 0 auto;
   }
+
+  &--wider {
+    @media (min-width: $desktop-width) {
+      width: 1440px;
+      margin: 0 auto;
+    }
+  }
 }

@@ -76,13 +76,99 @@
 }
 
 .example__slider {
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 280px;
+  justify-content: center;
+
   @media (min-width: $tablet-width) {
     justify-self: center;
     grid-column: 1 / -1;
+    width: 560px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / -1;
     grid-row: 1 / -1;
+  }
+}
+
+.example__before {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+  overflow: hidden;
+}
+
+.example__after {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  justify-self: right;
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  overflow: hidden;
+}
+
+.example__divider {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  width: 4px;
+  padding: 0;
+  border-radius: 2px;
+  border: none;
+  background-color: $background-color-fourty;
+
+  &:hover {
+    background-color: $theme-color;
+
+    .example__button {
+      border-color: $theme-color;
+    }
+
+    .example__button::before {
+      background-color: $theme-color;
+    }
+  }
+
+  &:active {
+    background-color: $theme-color-lighter;
+    opacity: 60%;
+
+    .example__button {
+      border-color: $theme-color-lighter;
+    }
+
+    .example__button::before {
+      background-color: $theme-color-lighter;
+    }
+  }
+}
+
+.example__button {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid $background-color-fourty;
+  background-color: $background-color-main;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 18px;
+    background-color: $background-color-fourty;
+    mask-image: url("../../icons/stack.svg#example_arrows");
   }
 }
