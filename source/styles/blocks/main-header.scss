@@ -56,6 +56,11 @@
       display: block;
     }
   }
+
+  &--no-js {
+    display: block;
+    position: initial;
+  }
 }
 
 .main-header__button {
@@ -95,5 +100,9 @@
     height: 2px;
     background-color: $header-color-main;
     transform: rotate(-45deg);
+  }
+
+  &--no-js {
+    display: none;
   }
 }

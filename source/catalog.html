@@ -24,13 +24,14 @@
         </picture>
       </a>
 
-      <button class="main-header__button button" type="button">
+      <!-- класс main-header__button--open меняет иконку в кнопке на крестик -->
+      <button class="main-header__button main-header__button--no-js button" type="button">
         <span class="main-header__button-text visually-hidden">Открытие и закрытие меню</span>
       </button>
     </div>
 
-    <!-- класс main-header__navigation--hidden скрывает меню -->
-    <nav class="main-header__navigation main-header__navigation--hidden site-navigation">
+    <!-- класс main-header__navigation--hidden скрывает меню, класс main-header__navigation--no-js отображает меню при отсутствии JS -->
+    <nav class="main-header__navigation main-header__navigation--no-js main-header__navigation--hidden site-navigation">
       <ul class="site-navigation__list">
         <li class="site-navigation__item">
           <a class="site-navigation__link" href="index.html">Главная</a>
