@@ -4,4 +4,5 @@ const mainHeaderButton = document.querySelector('.main-header__button');
 
 mainHeaderButton.addEventListener('click', () => {
   mainHeaderNavigation.classList.toggle('main-header__navigation--hidden');
+  mainHeaderButton.classList.toggle('main-header__button--open');
 });
