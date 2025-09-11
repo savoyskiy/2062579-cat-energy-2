@@ -15,15 +15,22 @@
 
 <body class="page__body">
   <header class="main-header container">
-    <a class="main-header__link" href="index.html">
-      <picture>
-        <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" type="image/svg+xml" width="174" height="50">
-        <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml" width="174" height="50">
-        <img class="main-header__logo" src="images/logo-mobile.svg" width="190" height="38" alt="Логотип сайта Cat Energy.">
-      </picture>
-    </a>
+    <div class="main-header__logo-wrapper">
+      <a class="main-header__link" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" type="image/svg+xml" width="174" height="50">
+          <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml" width="174" height="50">
+          <img class="main-header__logo" src="images/logo-mobile.svg" width="190" height="38" alt="Логотип сайта Cat Energy.">
+        </picture>
+      </a>
 
-    <nav class="main-header__navigation site-navigation">
+      <button class="main-header__button button" type="button">
+        <span class="main-header__button-text visually-hidden">Открытие и закрытие меню</span>
+      </button>
+    </div>
+
+    <!-- класс main-header__navigation--hidden скрывает меню -->
+    <nav class="main-header__navigation main-header__navigation--hidden site-navigation">
       <ul class="site-navigation__list">
         <li class="site-navigation__item">
           <a class="site-navigation__link" href="index.html">Главная</a>
@@ -36,10 +43,6 @@
         </li>
       </ul>
     </nav>
-
-    <button class="main-header__button button" type="button">
-      <span class="main-header__button-text visually-hidden">Открытие и закрытие меню</span>
-    </button>
   </header>
 
   <main class="main catalog">
