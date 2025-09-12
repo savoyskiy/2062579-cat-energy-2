@@ -69,6 +69,9 @@
   color: $text-color-main;
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 157px;
     font-size: 16px;
   }
