@@ -89,6 +89,17 @@
     width: 78px;
     height: 80px;
     background-image: url("../../icons/stack.svg#gift_icon");
+
+    @media (min-width: $tablet-width) {
+      top: 57px;
+      left: 77px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 56px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -98,4 +109,12 @@
   line-height: 20px;
   text-align: center;
   color: $header-color-invert;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
 }

@@ -8,11 +8,18 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+    padding: 25px 37px 27px;
+    border-right: 1px solid $background-color-eighty;
+    border-left: 1px solid $background-color-eighty;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+    align-items: center;
+    padding: 15px 0 17px;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
   }
 
   &:first-child {
@@ -29,11 +36,13 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    margin: 0 0 25px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
+    margin: 0;
   }
 }
 
@@ -45,6 +54,11 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #222222;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-good-card__description {
@@ -60,11 +74,23 @@
   @media (min-width: $tablet-width) {
     grid-column: 2 / -1;
     grid-row: 1 / 2;
+    font-size: 16px;
+    line-height: 20px;
+    justify-content: end;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
+    margin: 0 40px 0 0;
+  }
+}
+
+.additional-good-card__value {
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 92px;
+    text-align: end;
   }
 }
 
