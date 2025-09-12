@@ -1,5 +1,5 @@
 .actions-and-news {
-  padding: 0 20px 40px;
+  padding: 40px 20px;
 
   @media (min-width: $tablet-width) {
     padding: 0 68px 80px;
@@ -11,6 +11,7 @@
 }
 
 .actions-and-news__header {
+  margin: 0 0 32px;
   font-family: $main-header;
   font-weight: 400;
   font-size: 24px;
@@ -28,9 +29,12 @@
 }
 
 .actions-and-news__text {
+  min-height: 48px;
+  margin: 0 0 24px;
   font-family: $main-header;
   font-size: 16px;
   line-height: 24px;
+  text-align: center;
 }
 
 .actions-and-news__form {
@@ -45,11 +49,15 @@
 }
 
 .actions-and-news__email-input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
   font-family: $main-header;
   font-size: 20px;
   line-height: 20px;
   color: $text-color-main;
   text-transform: uppercase;
+  border: 1px solid $background-color-eighty;
 
   &::placeholder {
     color: inherit;
@@ -57,6 +65,7 @@
 }
 
 .actions-and-news__button {
+  padding: 15px;
   font-size: 20px;
   line-height: 26px;
 }
