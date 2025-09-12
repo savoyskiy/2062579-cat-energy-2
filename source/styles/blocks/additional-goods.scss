@@ -57,11 +57,12 @@
 
 .additional-goods__gift {
   position: relative;
+  min-height: 60px;
   margin: 0 20px;
   padding: 187px 58px 43px;
   background-color: $theme-color;
   background-image: url("../../images/catalog/gift-mobile@2x.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
@@ -76,7 +77,7 @@
     grid-column: 2 / -1;
     margin: 0 110px 0 0;
     padding: 185px 42px 43px;
-    background-image: url("../../icons/stack.svg#gift_icon"), url("../../images/catalog/gift-desktop@2x.jpg");
+    background-image: url("../../images/catalog/gift-desktop@2x.jpg");
   }
 
   &::after {
