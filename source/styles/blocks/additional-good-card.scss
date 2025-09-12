@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
+  padding: 13px 0 18px;
+  border-bottom: 1px solid $background-color-eighty;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -12,9 +14,14 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
   }
+
+  &:first-child {
+    border-top: 1px solid $background-color-eighty;
+  }
 }
 
 .additional-good-card__header-link {
+  margin: 0 0 13px;
   text-decoration: none;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
@@ -31,6 +38,7 @@
 }
 
 .additional-good-card__header {
+  margin: 0;
   font-family: $main-header;
   font-weight: 400;
   font-size: 16px;
@@ -42,6 +50,9 @@
 .additional-good-card__description {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px;
   font-size: 14px;
   line-height: 14px;
   color: $text-color-main;
@@ -60,8 +71,10 @@
 .additional-good-card__button {
   grid-column: 1 / -1;
   grid-row: 3 / -1;
+  padding: 10px;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
