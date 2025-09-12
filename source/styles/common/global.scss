@@ -5,6 +5,12 @@
     margin: 0 auto;
   }
 
+  &--no-margin {
+    @media (min-width: $desktop-width) {
+      width: 1440px;
+    }
+  }
+
   &--wider {
     @media (min-width: $desktop-width) {
       width: 1440px;
