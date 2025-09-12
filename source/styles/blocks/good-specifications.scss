@@ -2,4 +2,18 @@
   font-size: 12px;
   line-height: 16px;
   color: $text-color-main;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.good-specifications__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0 4px;
+    border-bottom: 1px solid $background-color-eighty;
+  }
 }
