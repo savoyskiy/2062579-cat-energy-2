@@ -14,53 +14,57 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header container">
-    <div class="main-header__logo-wrapper">
-      <a class="main-header__link" href="index.html">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" type="image/svg+xml" width="174" height="50">
-          <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml" width="174" height="50">
-          <img class="main-header__logo" src="images/logo-mobile.svg" width="190" height="38" alt="Логотип сайта Cat Energy.">
-        </picture>
-      </a>
+  <div class="main-header-container">
+    <header class="main-header main-header--index container">
+      <div class="main-header__logo-wrapper">
+        <a class="main-header__link" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" type="image/svg+xml" width="174" height="50">
+            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml" width="174" height="50">
+            <img class="main-header__logo" src="images/logo-mobile.svg" width="190" height="38" alt="Логотип сайта Cat Energy.">
+          </picture>
+        </a>
 
-      <!-- класс main-header__button--open меняет иконку в кнопке на крестик -->
-      <button class="main-header__button main-header__button--no-js button" type="button">
-        <span class="main-header__button-text visually-hidden">Открытие и закрытие меню</span>
-      </button>
-    </div>
+        <!-- класс main-header__button--open меняет иконку в кнопке на крестик -->
+        <button class="main-header__button main-header__button--no-js button" type="button">
+          <span class="main-header__button-text visually-hidden">Открытие и закрытие меню</span>
+        </button>
+      </div>
 
-    <!-- класс main-header__navigation--hidden скрывает меню, класс main-header__navigation--no-js отображает меню при отсутствии JS -->
-    <nav class="main-header__navigation main-header__navigation--no-js main-header__navigation--hidden site-navigation">
-      <ul class="site-navigation__list">
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="index.html">Главная</a>
-        </li>
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="programms.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+      <!-- класс main-header__navigation--hidden скрывает меню, класс main-header__navigation--no-js отображает меню при отсутствии JS -->
+      <nav class="main-header__navigation main-header__navigation--no-js main-header__navigation--hidden site-navigation">
+        <ul class="site-navigation__list site-navigation__list--index">
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="programms.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 
   <main class="main main-page">
     <h1 class="main-page__header visually-hidden">Сайт питания для котов Cat Energy</h1>
 
-    <section class="main-page__hero hero container">
-      <h2 class="hero__header">Функциональное питание для котов</h2>
-      <p class="hero__slogan">Занялся собой? Займись котом!</p>
-      <div class="hero__picture-wrapper">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="images/index/hero_desktop@1x.png 1x, images/index/hero_desktop@2x.png 2x" type="image/png" width="552" height="499">
-          <source media="(min-width: 768px)" srcset="images/index/hero_tablet@1x.png 1x, images/index/hero_tablet@2x.png 2x" type="image/png" width="709" height="609">
-          <img src="images/index/hero_mobile@1x.png" srcset="images/index/hero_mobile@2x.png 2x" width="280" height="270" alt="Питание для котов.">
-        </picture>
-      </div>
-      <a class="hero__button button" href="#">Подобрать программу</a>
-    </section>
+    <div class="main-page__hero-wrapper">
+      <section class="main-page__hero hero container">
+        <h2 class="hero__header">Функциональное питание для котов</h2>
+        <p class="hero__slogan">Занялся собой? Займись котом!</p>
+        <div class="hero__picture-wrapper">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/index/hero_desktop@1x.png 1x, images/index/hero_desktop@2x.png 2x" type="image/png" width="552" height="499">
+            <source media="(min-width: 768px)" srcset="images/index/hero_tablet@1x.png 1x, images/index/hero_tablet@2x.png 2x" type="image/png" width="709" height="609">
+            <img class="hero__picture" src="images/index/hero_mobile@1x.png" srcset="images/index/hero_mobile@2x.png 2x" width="280" height="270" alt="Питание для котов.">
+          </picture>
+        </div>
+        <a class="hero__button button" href="#">Подобрать программу</a>
+      </section>
+    </div>
 
     <section class="main-page__programms programms container">
       <h2 class="programms__header visually-hidden">Программы питания для котов</h2>

@@ -13,6 +13,13 @@
   @media (min-width: $desktop-width) {
     padding: 55px 110px 29px;
   }
+
+  &--index {
+    @media (min-width: $desktop-width) {
+      width: 1220px;
+      align-self: center;
+    }
+  }
 }
 
 .main-header__logo-wrapper {
@@ -27,6 +34,10 @@
     display: block;
     width: auto;
     border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
