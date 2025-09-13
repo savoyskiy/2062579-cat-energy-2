@@ -4,6 +4,10 @@
   line-height: 20px;
   text-transform: uppercase;
   background-color: $background-color-main;
+
+  @media (min-width: $desktop-width) {
+    background: transparent;
+  }
 }
 
 .site-navigation__list {
@@ -26,7 +30,7 @@
   &--index {
     @media (min-width: $desktop-width) {
       color: $header-color-invert;
-      background-color: $theme-color;
+      background: transparent;
     }
   }
 }

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 27px 20px 0;
-  background: linear-gradient(to top, transparent 178px, $theme-color 178px);
+  background: linear-gradient(to top, transparent 176px, $theme-color-opacity 176px);
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -17,7 +17,7 @@
     grid-template-columns: 416px auto;
     align-items: start;
     padding: 0 0 52px 190px;
-    background: linear-gradient(to right, transparent 50%, $theme-color 50%);
+    background: transparent;
   }
 }
 
@@ -78,12 +78,13 @@
   @media (min-width: $tablet-width) {
     grid-row: 3 / 4;
     grid-column: 1 / -1;
-    margin: 0;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
     grid-row: 1 / -1;
     grid-column: 2 / -1;
+    margin-left: -63px;
   }
 }
 
