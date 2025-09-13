@@ -8,8 +8,9 @@
     left: 0;
     right: 0;
     height: 302px;
-    background-image: url("../../images/index/hero_background_mobile@2x.png");
+    background-image: url("../../images/index/hero_background_wider_mobile@2x.png");
     background-repeat: no-repeat;
+    background-position: top center;
     background-size: cover;
     z-index: -1;
   }
@@ -24,6 +25,7 @@
       height: 694px;
       background-image: url("../../images/index/cat-big@2x.jpg");
       background-size: cover;
+      background-position: bottom left;
     }
   }
 }
