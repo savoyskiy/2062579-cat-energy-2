@@ -81,6 +81,7 @@
   min-height: 362px;
   background-image: url("../../images/map_mobile@2x.png");
   background-size: cover;
+  background-position: center;
   background-color: #aadaff;
 
   @media (min-width: $tablet-width) {
@@ -92,5 +93,13 @@
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     background-image: url("../../images/map_desktop@2x.png");
+  }
+}
+
+.cooperation__map-insert {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
   }
 }
