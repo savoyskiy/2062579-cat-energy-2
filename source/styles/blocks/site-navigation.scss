@@ -4,6 +4,7 @@
   line-height: 20px;
   text-transform: uppercase;
   background-color: $background-color-main;
+  z-index: 1;
 
   @media (min-width: $desktop-width) {
     background: transparent;
