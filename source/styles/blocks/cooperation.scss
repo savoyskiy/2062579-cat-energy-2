@@ -18,7 +18,7 @@
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 110px 1fr;
-    grid-template-rows: 95px 1fr;
+    grid-template-rows: 95px min-content;
   }
 }
 
@@ -36,7 +36,6 @@
     grid-row: 2 / -1;
     z-index: 1;
     width: 407px;
-    height: 79px;
     padding: 60px 78px 60px 80px;
     background-color: $background-color-main;
   }
@@ -78,14 +77,12 @@
 }
 
 .cooperation__map {
-  min-height: 362px;
   background-image: url("../../images/map_mobile@2x.png");
   background-size: cover;
   background-position: center;
   background-color: #aadaff;
 
   @media (min-width: $tablet-width) {
-    min-height: 400px;
     background-image: url("../../images/map_tablet@2x.png");
   }
 
@@ -100,6 +97,7 @@
   display: block;
 
   @media (min-width: $tablet-width) {
-    height: 400px;
+    min-height: 400px;
+    height: 100%;
   }
 }
