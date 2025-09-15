@@ -1,5 +1,13 @@
 .example {
-  background-color: $background-color-threety;
+  background: $background-color-threety;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to top, $background-color-threety 462px, transparent 462px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient(to bottom, transparent 135px, $background-color-threety 135px);
+  }
 }
 
 .example__data-wrapper {
@@ -7,9 +15,9 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: min-content auto;
     grid-template-rows: min-content min-content min-content min-content;
-    padding: 0 30px 101px;
+    padding: 45px 30px 101px;
   }
 
   @media (min-width: $desktop-width) {
@@ -33,15 +41,18 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
+    margin: 0 0 146px;
   }
 }
 
 .example__description {
+  min-height: 108px;
   margin: 0 0 20px;
   color: $text-color-main;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
+    min-height: 72px;
     margin: 0 0 55px;
     font-size: 16px;
     line-height: 24px;
@@ -49,28 +60,51 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
+    margin: 0 0 69px;
+    width: 436px;
+    min-height: 96px;
   }
 }
 
 .example__list {
+  margin: 0 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 99px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
+    justify-self: start;
+    margin: 0 0 55px;
   }
 }
 
 .example__costs {
+  margin: 0 0 20px;
   font-family: $main-header;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 9px;
+    margin: 0;
+    padding: 11px 0 0;
     font-size: 20px;
     text-align: end;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
+    flex-direction: row;
+    align-items: start;
+    gap: 63px;
+    padding: 0;
     text-align: start;
   }
 }
@@ -92,6 +126,7 @@
   @media (min-width: $desktop-width) {
     grid-column: 2 / -1;
     grid-row: 1 / -1;
+    justify-self: end;
   }
 }
 
@@ -122,10 +157,15 @@
   display: grid;
   place-items: center;
   width: 4px;
+  height: 256px;
   padding: 0;
   border-radius: 2px;
   border: none;
   background-color: $background-color-fourty;
+
+  @media (min-width: $tablet-width) {
+    height: 512px;
+  }
 
   &:hover {
     background-color: $theme-color;
