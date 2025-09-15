@@ -125,14 +125,15 @@
   }
 
   &:focus-visible {
-    padding: 11px;
-    border: 2px solid $outline-color;
-    outline: none;
+    border-color: $outline-color;
+    outline: 2px solid $outline-color;
+    outline-offset: -2px;
   }
 
   &:invalid {
-    padding: 11px;
-    border: 2px solid $error-color;
+    border-color: $error-color;
+    outline: 2px solid $error-color;
+    outline-offset: -2px;
   }
 }
 
