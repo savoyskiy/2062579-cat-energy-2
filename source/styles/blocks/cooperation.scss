@@ -77,27 +77,43 @@
 }
 
 .cooperation__map {
-  background-image: url("../../images/map_mobile@2x.png");
-  background-size: cover;
-  background-position: center;
-  background-color: #aadaff;
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../../images/map_tablet@2x.png");
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  background-color: $background-color-eleventy;
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
-    background-image: url("../../images/map_desktop@2x.png");
   }
 }
 
 .cooperation__map-insert {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
   display: block;
+  background: transparent;
 
   @media (min-width: $tablet-width) {
     min-height: 400px;
     height: 100%;
   }
+}
+
+.cooperation__map-background {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: none;
+  width: 100%;
+
+  &--no-js {
+    display: block;
+  }
+}
+
+.cooperation__map-picture {
+  display: block;
+  object-fit: cover;
+  max-height: 100%;
+  width: 100%;
 }
