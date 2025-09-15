@@ -7,12 +7,12 @@
   list-style-type: none;
 
   @media (min-width: $tablet-width) {
-    gap: 60px;
-    padding: 30px 30px 74px;
+    gap: 141px 60px;
+    padding: 111px 30px 74px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 30px 110px 71px;
-    gap: 63px 80px;
+    padding: 111px 0 71px;
+    gap: 144px 80px;
   }
 }

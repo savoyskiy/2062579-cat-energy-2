@@ -1,8 +1,9 @@
 .main-header {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 13px 21px 14px 20px;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     flex-wrap: nowrap;
@@ -12,26 +13,120 @@
   @media (min-width: $desktop-width) {
     padding: 55px 110px 29px;
   }
+
+  &--index {
+    @media (min-width: $desktop-width) {
+      width: 1220px;
+      align-self: center;
+    }
+  }
+}
+
+.main-header__logo-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  margin: 0 auto 0 0;
+  padding: 13px 20px 14px;
+  border-bottom: 1px solid $background-color-fifty;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: auto;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .main-header__link {
   margin: 0 auto 0 0;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
+.main-header__logo {
+  display: block;
 }
 
 .main-header__navigation {
+  position: absolute;
+  top: 66px;
   order: 3;
   width: 100%;
 
   @media (min-width: $tablet-width) {
+    position: initial;
     width: auto;
+  }
+
+  &--hidden {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  &--no-js {
+    display: block;
+    position: initial;
   }
 }
 
 .main-header__button {
+  position: relative;
   width: 24px;
   height: 24px;
+  padding: 0;
+  background-color: $background-color-main;
+
+  &:hover,
+  &:active {
+    background-color: $background-color-main;
+  }
 
   @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $header-color-main;
+    box-shadow: 0 8px 0 $header-color-main, 0 16px 0 $header-color-main;
+  }
+
+  &--open::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &--open::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $header-color-main;
+    transform: rotate(-45deg);
+  }
+
+  &--no-js {
     display: none;
   }
 }

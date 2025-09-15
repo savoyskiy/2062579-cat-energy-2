@@ -1,62 +1,148 @@
 .actions-and-news {
-  padding: 0 20px 40px;
+  padding: 40px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 0 68px 80px;
+    padding: 80px 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px 104px;
+    padding: 96px 0 104px;
   }
 }
 
 .actions-and-news__header {
+  position: relative;
+  margin: 0 0 32px;
   font-family: $main-header;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
 
   @media (min-width: $tablet-width) {
+    margin: 0 0 66px;
+    padding: 0 0 0 30px;
     font-size: 32px;
     line-height: 32px;
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0 0 72px;
+    padding: 0 0 0 70px;
     font-size: 40px;
     line-height: 40px;
   }
 }
 
+.actions-and-news__header-wrapper {
+  padding: 0 40px 0 20px;
+  background-color: $background-color-main;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 40px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: $theme-color;
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      top: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 18px;
+    }
+  }
+}
+
 .actions-and-news__text {
+  min-height: 48px;
+  margin: 0 20px 24px;
   font-family: $main-header;
   font-size: 16px;
   line-height: 24px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    min-height: 64px;
+    margin: 0 68px 24px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 32px;
+    margin: 0 110px 24px;
+  }
 }
 
 .actions-and-news__form {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin: 0 20px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     gap: 0;
+    margin: 0 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 752px;
+    margin: 0 auto;
   }
 }
 
+.actions-and-news__email-label {
+  flex-grow: 1;
+}
+
 .actions-and-news__email-input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
   font-family: $main-header;
   font-size: 20px;
   line-height: 20px;
   color: $text-color-main;
   text-transform: uppercase;
+  border: 1px solid $background-color-tenty;
 
   &::placeholder {
     color: inherit;
   }
+
+  &:hover {
+    border-color: $background-color-eighty;
+  }
+
+  &:focus-visible {
+    border-color: $outline-color;
+    outline: 2px solid $outline-color;
+    outline-offset: -2px;
+  }
+
+  &:invalid {
+    border-color: $error-color;
+    outline: 2px solid $error-color;
+    outline-offset: -2px;
+  }
 }
 
 .actions-and-news__button {
+  padding: 15px;
   font-size: 20px;
   line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    width: 256px;
+  }
 }

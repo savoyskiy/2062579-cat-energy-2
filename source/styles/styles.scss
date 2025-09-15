@@ -10,6 +10,7 @@
 @import "./blocks/page.scss";
 
 /* HEADER */
+@import "./blocks/main-header-container";
 @import "./blocks/main-header.scss";
 @import "./blocks/site-navigation.scss";
 
@@ -20,8 +21,8 @@
 @import "./blocks/programms.scss";
 @import "./blocks/programm-version.scss";
 @import "./blocks/how-it-works.scss";
-@import "./blocks/example.scss";
 @import "./blocks/statistic.scss";
+@import "./blocks/example.scss";
 
 /* CATALOG */
 @import "./blocks/catalog.scss";

@@ -1,2 +1,20 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+.container {
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
 
+.container-wider {
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.container-no-margin {
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}

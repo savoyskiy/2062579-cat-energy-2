@@ -2,11 +2,13 @@
   padding: 0 20px 49px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px 47px;
+    padding: 0 30px 46px;
+    border-bottom: 1px solid $background-color-fifty;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 110px 69px;
+    border-bottom: none;
   }
 }
 
@@ -33,14 +35,16 @@
   list-style-type: none;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
     gap: 37px 137px;
+    counter-reset: item;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: min-content;
+    gap: 77px;
   }
 }
 
@@ -52,9 +56,24 @@
 
   @media (min-width: $tablet-width) {
     padding: 151px 0 57px;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      counter-increment: item;
+      content: counter(item) "";
+      position: absolute;
+      top: 0;
+      left: 113px;
+      font-family: $main-header;
+      font-size: 280px;
+      line-height: 280px;
+      color: $text-color-fourty;
+      z-index: -1;
+    }
   }
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -72,28 +91,28 @@
   }
 
   &--leaf {
-    &::before {
+    &::after {
       background-image: url("../../icons/stack.svg#work_leaf");
       background-size: 30px;
     }
   }
 
   &--boil {
-    &::before {
+    &::after {
       background-image: url("../../icons/stack.svg#work_boil");
       background-size: 26px;
     }
   }
 
   &--eat {
-    &::before {
+    &::after {
       background-image: url("../../icons/stack.svg#work_eat");
       background-size: 25px;
     }
   }
 
   &--clock {
-    &::before {
+    &::after {
       background-image: url("../../icons/stack.svg#work_clock");
       background-size: 26px;
     }
