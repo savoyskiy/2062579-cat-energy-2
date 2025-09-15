@@ -45,6 +45,7 @@
 }
 
 .site-navigation__link {
+  position: relative;
   display: block;
   padding: 22px 24px 24px;
   color: inherit;
@@ -52,6 +53,30 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
+    padding: 10px 0;
+
+    &--current::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $theme-color;
+    }
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+}
+
+.site-navigation__list--index .site-navigation__link--current::after {
+  @media (min-width: $desktop-width) {
+    background-color: $background-color-main;
   }
 }

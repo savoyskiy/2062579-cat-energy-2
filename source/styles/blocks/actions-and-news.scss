@@ -114,10 +114,25 @@
   line-height: 20px;
   color: $text-color-main;
   text-transform: uppercase;
-  border: 1px solid $background-color-eighty;
+  border: 1px solid $background-color-tenty;
 
   &::placeholder {
     color: inherit;
+  }
+
+  &:hover {
+    border-color: $background-color-eighty;
+  }
+
+  &:focus-visible {
+    padding: 11px;
+    border: 2px solid $outline-color;
+    outline: none;
+  }
+
+  &:invalid {
+    padding: 11px;
+    border: 2px solid $error-color;
   }
 }
 

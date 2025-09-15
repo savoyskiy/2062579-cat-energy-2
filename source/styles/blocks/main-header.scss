@@ -43,6 +43,14 @@
 
 .main-header__link {
   margin: 0 auto 0 0;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
 }
 
 .main-header__logo {
@@ -80,6 +88,11 @@
   height: 24px;
   padding: 0;
   background-color: $background-color-main;
+
+  &:hover,
+  &:active {
+    background-color: $background-color-main;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;

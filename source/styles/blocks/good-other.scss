@@ -93,4 +93,8 @@
   color: $text-color-main;
   background-color: $background-color-secondary;
   text-align: center;
+
+  &:hover {
+    background-color: $background-color-sixty;
+  }
 }

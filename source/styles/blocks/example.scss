@@ -179,6 +179,20 @@
     }
   }
 
+  &:focus-visible {
+    background-color: $theme-color;
+
+    .example__button {
+      border-color: $theme-color;
+      outline: 2px solid $outline-color;
+      box-shadow: 0 0 0 3px #ffffff;
+    }
+
+    .example__button::before {
+      background-color: $theme-color;
+    }
+  }
+
   &:active {
     background-color: $theme-color-lighter;
     opacity: 60%;
