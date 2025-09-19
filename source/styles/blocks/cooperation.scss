@@ -103,12 +103,8 @@
 .cooperation__map-background {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  display: none;
+  display: block;
   width: 100%;
-
-  &--no-js {
-    display: block;
-  }
 }
 
 .cooperation__map-picture {

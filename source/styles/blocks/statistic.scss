@@ -56,6 +56,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 150px;
     background-color: $background-color-threety;
   }
 }
