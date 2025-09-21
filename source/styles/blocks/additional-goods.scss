@@ -82,7 +82,7 @@
   margin: 0 20px;
   padding: 187px 58px 43px;
   background-color: $theme-color;
-  background-image: url("../../images/catalog/gift-mobile@2x.jpg");
+  background-image: linear-gradient($theme-color-opacity), url("../../images/catalog/gift_mobile@2x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -90,7 +90,7 @@
   @media (min-width: $tablet-width) {
     margin: 0 30px;
     padding: 70px 125px 70px 421px;
-    background-image: url("../../images/catalog/gift-tablet@2x.jpg");
+    background-image: linear-gradient($theme-color-opacity), url("../../images/catalog/gift_tablet@2x.jpg");
   }
 
   @media (min-width: $desktop-width) {
@@ -98,7 +98,7 @@
     grid-column: 2 / -1;
     margin: 0 110px 0 0;
     padding: 185px 42px 43px;
-    background-image: url("../../images/catalog/gift-desktop@2x.jpg");
+    background-image: linear-gradient($theme-color-opacity), url("../../images/catalog/gift_desktop@2x.jpg");
   }
 
   &::after {
