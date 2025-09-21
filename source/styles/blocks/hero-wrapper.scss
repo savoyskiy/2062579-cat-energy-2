@@ -4,28 +4,32 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: 176px;
     left: 0;
     right: 0;
     height: 302px;
-    background-image: url("../../images/index/hero_background_mobile@2x.png"), linear-gradient(to right, #4d4c51, #414045);
+    background-image: linear-gradient(to bottom, $theme-color-opacity 302px, transparent 302px), url("../../images/index/hero_background_mobile@2x.png"), linear-gradient(to right, #4d4c51, #414045);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;
     z-index: -1;
   }
 
-  @media (min-width: $desktop-width) {
-    background: linear-gradient(to right, transparent 50%, $theme-color-opacity 50%);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(100% - 478px);
+    background-image: linear-gradient(to right, #63a73b, #62a53a);
+    z-index: -1;
+  }
 
-    &::before {
-      left: 50%;
-      top: auto;
-      bottom: 0;
-      height: 694px;
-      background: url("../../images/index/cat-big@2x.jpg"), linear-gradient(to right, #535257, #3e3f44);
-      background-size: cover;
-      background-position: bottom left;
+  @media (min-width: $tablet-width) {
+    &::before,
+    &::after {
+      content: none;
     }
   }
 }
