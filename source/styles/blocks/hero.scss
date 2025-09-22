@@ -91,6 +91,8 @@
 
 .hero__picture {
   display: block;
+  object-fit: contain;
+  max-width: 100%;
 }
 
 .hero__button {

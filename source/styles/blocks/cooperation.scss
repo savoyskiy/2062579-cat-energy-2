@@ -79,7 +79,7 @@
 .cooperation__map {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content;
+  grid-template-rows: auto;
   background-color: $background-color-eleventy;
 
   @media (min-width: $desktop-width) {
@@ -111,13 +111,27 @@
   }
 }
 
+// .cooperation__map-wrapper {
+//   @media (min-width: $desktop-width) {
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+
 .cooperation__map-picture {
   display: block;
   object-fit: cover;
-  max-height: 100%;
   width: 100%;
+  height: 100%;
+  background-image: url("../../images/map_mobile@2x.png");
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../images/map_tablet@2x.png");
+  }
 
   @media (min-width: $desktop-width) {
-    height: 100%;
+    background-image: url("../../images/map_desktop@2x.png");
   }
 }

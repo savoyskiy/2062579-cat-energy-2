@@ -42,6 +42,8 @@
 
 .good-card__image {
   display: block;
+  object-fit: contain;
+  max-width: 100%;
 }
 
 .good-card__header-link {

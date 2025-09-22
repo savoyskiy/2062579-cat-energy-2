@@ -207,6 +207,11 @@
   }
 }
 
+.example__image {
+  display: block;
+  object-fit: cover;
+}
+
 .example__button {
   position: absolute;
   display: grid;

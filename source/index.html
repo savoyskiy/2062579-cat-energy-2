@@ -119,13 +119,13 @@
           <div class="example__before">
             <picture>
               <source media="(min-width: 768px)" srcset="images/index/cat_fat_tablet@1x.png 1x, images/index/cat_fat_tablet@2x.png 2x" type="image/png" width="560" height="512">
-              <img src="images/index/cat_fat_mobile@1x.png" srcset="images/index/cat_fat_mobile@2x.png 2x" width="280" height="256" alt="Толстый кот до программы.">
+              <img class="example__image" src="images/index/cat_fat_mobile@1x.png" srcset="images/index/cat_fat_mobile@2x.png 2x" width="280" height="256" alt="Толстый кот до программы.">
             </picture>
           </div>
           <div class="example__after">
             <picture>
               <source media="(min-width: 768px)" srcset="images/index/cat_skinny_tablet@1x.png 1x, images/index/cat_skinny_tablet@2x.png 2x" type="image/png" width="560" height="512">
-              <img src="images/index/cat_skinny_mobile@1x.png" srcset="images/index/cat_skinny_mobile@2x.png 2x" width="280" height="256" alt="Худой кот после программы.">
+              <img class="example__image" src="images/index/cat_skinny_mobile@1x.png" srcset="images/index/cat_skinny_mobile@2x.png 2x" width="280" height="256" alt="Худой кот после программы.">
             </picture>
           </div>
           <button class="example__divider" type="button">
@@ -142,7 +142,7 @@
     <section class="main-footer__cooperation cooperation">
       <div class="cooperation__wrapper container-wider">
         <div class="cooperation__text-wrapper">
-          <h2 class="cooperation__header">Приглашаем к сотрудничеству дилеров!</h2>
+          <h2 class="cooperation__header">Приглашаем<br class="cooperation__header-braker">к сотрудничеству дилеров!</h2>
           <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 <span class="cooperation__address-braker">Санкт-Петербург</span></p>
         </div>
       </div>
@@ -151,12 +151,8 @@
         </iframe>
 
         <div class="cooperation__map-background">
-          <noscript>
-            <picture>
-              <source media="(min-width: 1440px)" srcset="images/map_desktop@1x.png 1x, images/map_desktop@2x.png 2x" type="image/png" width="1440" height="400">
-              <source media="(min-width: 768px)" srcset="images/map_tablet@1x.png 1x, images/map_tablet@2x.png 2x" type="image/png" width="762" height="400">
-              <img class="cooperation__map-picture" src="images/map_mobile@1x.png" srcset="images/map_mobile@2x.png 2x" alt="" width="362" height="362">
-            </picture>
+          <noscript class="cooperation__map-wrapper">
+            <div class="cooperation__map-picture"></div>
           </noscript>
         </div>
       </div>
