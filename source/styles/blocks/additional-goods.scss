@@ -32,11 +32,18 @@
 }
 
 .additional-goods__header-wrapper {
+  display: inline-block;
+  max-width: 226px;
   padding: 0 40px 0 20px;
   background-color: $background-color-main;
 
   @media (min-width: $tablet-width) {
     padding: 0 40px;
+    max-width: 301px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 376px;
   }
 
   &::after {

@@ -59,6 +59,10 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 257px;
+  }
 }
 
 .additional-good-card__description {
@@ -86,11 +90,24 @@
   }
 }
 
-.additional-good-card__value {
+.additional-good-card__key {
+  display: block;
+  max-width: 160px;
+
   @media (min-width: $tablet-width) {
-    display: block;
-    width: 92px;
+    max-width: 165px;
     text-align: end;
+  }
+}
+
+.additional-good-card__value {
+  display: block;
+  max-width: 100px;
+  text-align: end;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+    width: 72px;
   }
 }
 
