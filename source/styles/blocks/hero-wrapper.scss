@@ -8,7 +8,7 @@
     left: 0;
     right: 0;
     height: 302px;
-    background-image: linear-gradient(to bottom, $theme-color-opacity 302px, transparent 302px), url("../../images/index/hero_background_mobile@2x.jpg"), linear-gradient(to right, #4d4c51, #414045);
+    background-image: linear-gradient(to bottom, $theme-color-opacity 302px, transparent 302px), url("../../images/index/hero_background_mobile@2x.jpg"), linear-gradient(to right, $background-color-special-one, $background-color-special-two);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;
@@ -22,7 +22,7 @@
     left: 0;
     right: 0;
     height: calc(100% - 478px);
-    background-image: linear-gradient(to right, #63a73b, #62a53a);
+    background-image: linear-gradient(to right, $background-color-special-three, $background-color-special-four);
     z-index: -1;
   }
 
