@@ -9,9 +9,15 @@
       right: 0;
       top: 0;
       height: 694px;
-      background: linear-gradient($theme-color-opacity), url("../../images/index/cat-big@2x.jpg"), linear-gradient(to right, $background-color-special-five, $background-color-special-six);
+      background-image: linear-gradient($theme-color-opacity), image-set(url("../../images/index/cat-big@1x.webp"), url("../../images/index/cat-big@1x.jpg")), linear-gradient(to right, $background-color-special-five, $background-color-special-six);
       background-size: cover;
       background-position: bottom left;
+    }
+
+    @media (min-resolution: 2dppx) {
+      &::before {
+        background-image: linear-gradient($theme-color-opacity), image-set(url("../../images/index/cat-big@2x.webp"), url("../../images/index/cat-big@2x.jpg")), linear-gradient(to right, $background-color-special-five, $background-color-special-six);
+      }
     }
 
     background: linear-gradient(to right, transparent 50%, $theme-color-opacity 50%);
