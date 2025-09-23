@@ -57,6 +57,9 @@
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <div class="hero__picture-wrapper">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/index/hero_desktop@1x.webp 1x, images/index/hero_desktop@2x.webp 2x" width="552" height="499">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/index/hero_tablet@1x.webp 1x, images/index/hero_tablet@2x.webp 2x" width="709" height="609">
+            <source type="image/webp" srcset="images/index/hero_mobile@1x.webp 1x, images/index/hero_mobile@2x.webp 2x" width="280" height="270">
             <source media="(min-width: 1440px)" srcset="images/index/hero_desktop@1x.png 1x, images/index/hero_desktop@2x.png 2x" type="image/png" width="552" height="499">
             <source media="(min-width: 768px)" srcset="images/index/hero_tablet@1x.png 1x, images/index/hero_tablet@2x.png 2x" type="image/png" width="709" height="609">
             <img class="hero__picture" src="images/index/hero_mobile@1x.png" srcset="images/index/hero_mobile@2x.png 2x" width="280" height="270" alt="Питание для котов.">
@@ -118,14 +121,18 @@
         <div class="example__slider">
           <div class="example__before">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/index/cat_fat_tablet@1x.webp 1x, images/index/cat_fat_tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="images/index/cat_fat_mobile@1x.webp 1x, images/index/cat_fat_mobile@2x.webp 2x" width="280" height="256">
               <source media="(min-width: 768px)" srcset="images/index/cat_fat_tablet@1x.png 1x, images/index/cat_fat_tablet@2x.png 2x" type="image/png" width="560" height="512">
-              <img class="example__image" src="images/index/cat_fat_mobile@1x.png" srcset="images/index/cat_fat_mobile@2x.png 2x" width="280" height="256" alt="Толстый кот до программы.">
+              <img class="example__image" src="images/index/cat_fat_mobile@1x.png" srcset="images/index/cat_fat_mobile@2x.png 2x" width="280" height="256" loading="lazy" alt="Толстый кот до программы.">
             </picture>
           </div>
           <div class="example__after">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/index/cat_skinny_tablet@1x.webp 1x, images/index/cat_skinny_tablet@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="images/index/cat_skinny_mobile@1x.webp 1x, images/index/cat_skinny_mobile@2x.webp 2x" width="280" height="256">
               <source media="(min-width: 768px)" srcset="images/index/cat_skinny_tablet@1x.png 1x, images/index/cat_skinny_tablet@2x.png 2x" type="image/png" width="560" height="512">
-              <img class="example__image" src="images/index/cat_skinny_mobile@1x.png" srcset="images/index/cat_skinny_mobile@2x.png 2x" width="280" height="256" alt="Худой кот после программы.">
+              <img class="example__image" src="images/index/cat_skinny_mobile@1x.png" srcset="images/index/cat_skinny_mobile@2x.png 2x" width="280" height="256" loading="lazy" alt="Худой кот после программы.">
             </picture>
           </div>
           <button class="example__divider" type="button">
@@ -147,7 +154,7 @@
         </div>
       </div>
       <div class="cooperation__map">
-        <iframe class="cooperation__map-insert" src="https://yandex.ru/map-widget/v1/?um=constructor%3A6f98ff258cfb7e9e939b0a6081851570227bd1ebc805a435ecda16ff295d65b1&amp;source=constructor" width="100%" height="362" frameborder="0">
+        <iframe class="cooperation__map-insert" src="https://yandex.ru/map-widget/v1/?um=constructor%3A6f98ff258cfb7e9e939b0a6081851570227bd1ebc805a435ecda16ff295d65b1&amp;source=constructor" width="100%" height="362" loading="lazy" frameborder="0">
         </iframe>
 
         <div class="cooperation__map-background">
@@ -160,7 +167,7 @@
 
     <div class="main-footer__wrapper container">
       <a class="main-footer__link" href="index.html">
-        <img class="main-footer__logo" src="images/logo_text.svg" width="128" height="24" alt="Логотип сайта Cat Energy.">
+        <img class="main-footer__logo" src="images/logo_text.svg" width="128" height="24" loading="lazy" alt="Логотип сайта Cat Energy.">
       </a>
 
       <ul class="main-footer__social social-list">
