@@ -89,23 +89,15 @@
   margin: 0 20px;
   padding: 187px 58px 43px;
   background-color: $theme-color;
-  background-image: linear-gradient($theme-color-opacity), image-set(url("../../images/catalog/gift_mobile@1x.webp"), url("../../images/catalog/gift_mobile@1x.jpg"));
+  background-image: linear-gradient($theme-color-opacity), image-set(url("../../images/catalog/gift_mobile@2x.webp") 2x, url("../../images/catalog/gift_mobile@2x.jpg") 2x, url("../../images/catalog/gift_mobile@1x.webp") 1x, url("../../images/catalog/gift_mobile@1x.jpg") 1x);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
-  @media (min-resolution: 2dppx) {
-    background-image: linear-gradient($theme-color-opacity), image-set(url("../../images/catalog/gift_mobile@2x.webp"), url("../../images/catalog/gift_mobile@2x.jpg"));
-  }
-
   @media (min-width: $tablet-width) {
     margin: 0 30px;
     padding: 70px 125px 70px 421px;
-    background-image: linear-gradient($theme-color-opacity), image-set(url("../../images/catalog/gift_tablet@1x.webp"), url("../../images/catalog/gift_tablet@1x.jpg"));
-
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient($theme-color-opacity), image-set(url("../../images/catalog/gift_tablet@2x.webp"), url("../../images/catalog/gift_tablet@2x.jpg"));
-    }
+    background-image: linear-gradient($theme-color-opacity), image-set(url("../../images/catalog/gift_tablet@2x.webp") 2x, url("../../images/catalog/gift_tablet@2x.jpg") 2x, url("../../images/catalog/gift_tablet@1x.webp") 1x, url("../../images/catalog/gift_tablet@1x.jpg") 1x);
   }
 
   @media (min-width: $desktop-width) {
@@ -113,11 +105,7 @@
     grid-column: 2 / -1;
     margin: 0 110px 0 0;
     padding: 185px 42px 43px;
-    background-image: linear-gradient($theme-color-opacity), image-set(url("../../images/catalog/gift_desktop@1x.webp"), url("../../images/catalog/gift_desktop@1x.jpg"));
-
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient($theme-color-opacity), image-set(url("../../images/catalog/gift_desktop@2x.webp"), url("../../images/catalog/gift_desktop@2x.jpg"));
-    }
+    background-image: linear-gradient($theme-color-opacity), image-set(url("../../images/catalog/gift_desktop@2x.webp") 1x, url("../../images/catalog/gift_desktop@2x.jpg") 1x, url("../../images/catalog/gift_desktop@1x.webp") 1x, url("../../images/catalog/gift_desktop@1x.jpg") 1x);
   }
 
   &::after {

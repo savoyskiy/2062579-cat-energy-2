@@ -16,7 +16,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header container">
+  <header class="main-header container" data-test="header">
     <div class="main-header__logo-wrapper">
       <a class="main-header__link" href="index.html">
         <picture>
@@ -50,7 +50,7 @@
 
   <main class="main catalog">
     <h1 class="catalog__header container">Каталог продукции</h1>
-    <section class="catalog__main-goods main-goods container">
+    <section class="catalog__main-goods main-goods container" data-test="catalog">
       <h2 class="main-goods__header visually-hidden">Корма для котов</h2>
 
       <ul class="main-goods__list">
@@ -293,7 +293,7 @@
       </ul>
     </section>
 
-    <section class="catalog__additional-goods additional-goods container-wider">
+    <section class="catalog__additional-goods additional-goods container-wider" data-test="additional">
       <h2 class="additional-goods__header">
         <span class="additional-goods__header-wrapper">Дополнительные товары</span>
       </h2>
@@ -376,7 +376,7 @@
   </main>
 
   <footer class="main-footer">
-    <section class="main-footer__cooperation cooperation cooperation--grey">
+    <section class="main-footer__cooperation cooperation cooperation--grey" data-test="contacts">
       <div class="cooperation__wrapper container-wider">
         <div class="cooperation__text-wrapper">
           <h2 class="cooperation__header">Приглашаем<br class="cooperation__header-braker">к сотрудничеству дилеров!</h2>
@@ -396,7 +396,7 @@
       </div>
     </section>
 
-    <div class="main-footer__wrapper container">
+    <div class="main-footer__wrapper container" data-test="footer">
       <a class="main-footer__link" href="index.html">
         <img class="main-footer__logo" src="images/logo_text.svg" width="128" height="24" loading="lazy" alt="Логотип сайта Cat Energy.">
       </a>

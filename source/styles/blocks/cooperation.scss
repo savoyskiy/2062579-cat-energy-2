@@ -116,27 +116,15 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
-  background-image: image-set(url("../../images/map_mobile@1x.webp"), url("../../images/map_mobile@1x.png"));
+  background-image: image-set(url("../../images/map_mobile@2x.webp") 2x, url("../../images/map_mobile@2x.png") 2x, url("../../images/map_mobile@1x.webp") 1x, url("../../images/map_mobile@1x.png") 1x);
   background-size: cover;
   background-position: center;
 
-  @media (min-resolution: 2dppx) {
-    background-image: image-set(url("../../images/map_mobile@2x.webp"), url("../../images/map_mobile@2x.png"));
-  }
-
   @media (min-width: $tablet-width) {
-    background-image: image-set(url("../../images/map_tablet@1x.webp"), url("../../images/map_tablet@1x.png"));
-
-    @media (min-resolution: 2dppx) {
-      background-image: image-set(url("../../images/map_tablet@2x.webp"), url("../../images/map_tablet@2x.png"));
-    }
+    background-image: image-set(url("../../images/map_tablet@2x.webp") 2x, url("../../images/map_tablet@2x.png") 2x, url("../../images/map_tablet@1x.webp") 1x, url("../../images/map_tablet@1x.png") 1x);
   }
 
   @media (min-width: $desktop-width) {
-    background-image: image-set(url("../../images/map_desktop@1x.webp"), url("../../images/map_desktop@1x.png"));
-
-    @media (min-resolution: 2dppx) {
-      background-image: image-set(url("../../images/map_desktop@2x.webp"), url("../../images/map_desktop@2x.png"));
-    }
+    background-image: image-set(url("../../images/map_desktop@2x.webp") 2x, url("../../images/map_desktop@2x.png") 2x, url("../../images/map_desktop@1x.webp") 1x, url("../../images/map_desktop@1x.png") 1x);
   }
 }
