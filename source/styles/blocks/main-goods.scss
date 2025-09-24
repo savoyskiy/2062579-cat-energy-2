@@ -6,12 +6,24 @@
   padding: 0;
   list-style-type: none;
 
+  @media (min-width: 640px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 141px 60px;
     padding: 111px 30px 74px;
   }
 
+  @media (min-width: 930px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 111px 0 71px;
     gap: 144px 80px;
   }

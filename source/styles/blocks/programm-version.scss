@@ -8,7 +8,10 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
     width: 457px;
+    min-height: 242px;
     padding: 77px 61px 55px 52px;
   }
 
@@ -137,7 +140,7 @@
 
   @media (min-width: $desktop-width) {
     min-height: 72px;
-    margin: 0 0 23px;
+    margin: 0 0 auto;
   }
 }
 
@@ -156,6 +159,10 @@
     padding: 9px 37px 9px 0;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    place-self: start end;
   }
 
   &::after {
