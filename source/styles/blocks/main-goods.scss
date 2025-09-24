@@ -6,7 +6,7 @@
   padding: 0;
   list-style-type: none;
 
-  @media (min-width: 640px) {
+  @media (min-width: $mobile-wide-with) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -18,7 +18,7 @@
     padding: 111px 30px 74px;
   }
 
-  @media (min-width: 930px) {
+  @media (min-width: $tablet-wide-width) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
