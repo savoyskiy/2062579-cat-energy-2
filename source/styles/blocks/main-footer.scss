@@ -23,7 +23,7 @@
 
 .main-footer__link {
   display: block;
-  padding: 20px 0;
+  padding: 19px 0;
 
   &:hover {
     opacity: 80%;
@@ -42,4 +42,45 @@
   display: block;
   object-fit: contain;
   max-width: 100%;
+}
+
+.main-footer__social {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    left: 17px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 1px;
+    background-color: $background-color-ninety;
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
+  }
+}
+
+.main-footer__htmlacademy {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $background-color-ninety;
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
+  }
 }

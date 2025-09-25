@@ -8,20 +8,20 @@
     display: grid;
     grid-template-rows: min-content min-content min-content;
     grid-template-columns: auto;
-    padding: 26px 29px 0 30px;
+    padding: 37px 29px 0 30px;
     background: $background-color-main;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 416px auto;
     align-items: start;
-    padding: 0 0 52px 190px;
+    padding: 0 0 52px 160px;
     background: transparent;
   }
 }
 
 .hero__header {
-  margin: 0 0 25px;
+  margin: 0 0 24px;
   min-height: 72px;
   text-align: center;
   font-family: $main-header;
@@ -33,7 +33,7 @@
   @media (min-width: $tablet-width) {
     width: 416px;
     min-height: 120px;
-    margin: 0 0 40px;
+    margin: 0 0 41px;
     padding-left: 90px;
     text-align: start;
     font-size: 60px;
@@ -85,7 +85,7 @@
   @media (min-width: $desktop-width) {
     grid-row: 1 / -1;
     grid-column: 2 / -1;
-    margin-left: -63px;
+    margin-left: -49px;
   }
 }
 
@@ -99,6 +99,8 @@
   align-self: stretch;
   margin: 0;
   padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
 
   @media (min-width: $tablet-width) {

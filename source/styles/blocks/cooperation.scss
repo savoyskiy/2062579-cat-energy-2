@@ -54,6 +54,7 @@
 
   @media (min-width: $tablet-width) {
     width: 163px;
+    padding-top: 2px;
     font-size: 20px;
     line-height: 26px;
   }
@@ -73,6 +74,11 @@
     justify-content: space-between;
     width: 157px;
     font-size: 16px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
   }
 }
 

@@ -1,6 +1,6 @@
 .programm-version {
   position: relative;
-  padding: 30px 20px 18px;
+  padding: 30px 20px 19px;
   background-color: $background-color-secondary;
 
   @media (min-width: $tablet-width) {
@@ -163,22 +163,27 @@
 
   @media (min-width: $desktop-width) {
     place-self: start end;
+    padding-top: 10px;
   }
 
   &::after {
     content: "";
     position: absolute;
     top: 7px;
-    right: -7px;
+    right: -11px;
     display: block;
     width: 32px;
-    height: 10px;
+    height: 12px;
     background-image: url("../../icons/stack.svg#programm_arrow");
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
       top: 14px;
-      right: -17px;
+      right: -20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -21px;
     }
   }
 

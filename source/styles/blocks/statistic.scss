@@ -29,9 +29,13 @@
 
   @media (min-width: $tablet-width) {
     min-width: 102px;
-    padding: 14px 29px 19px;
+    padding: 14px 24px 20px;
     font-size: 30px;
     line-height: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 14px 29px 20px;
   }
 }
 
