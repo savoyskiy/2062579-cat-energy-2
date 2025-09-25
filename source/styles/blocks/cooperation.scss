@@ -119,7 +119,6 @@
 
 .cooperation__map-picture {
   display: block;
-  object-fit: cover;
   width: 100%;
   height: 100%;
   background-image: image-set(url("../../images/map_mobile@2x.webp") 2x, url("../../images/map_mobile@2x.png") 2x, url("../../images/map_mobile@1x.webp") 1x, url("../../images/map_mobile@1x.png") 1x);
@@ -133,4 +132,10 @@
   @media (min-width: $desktop-width) {
     background-image: image-set(url("../../images/map_desktop@2x.webp") 2x, url("../../images/map_desktop@2x.png") 2x, url("../../images/map_desktop@1x.webp") 1x, url("../../images/map_desktop@1x.png") 1x);
   }
+}
+
+.cooperation__map-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
 }

@@ -389,7 +389,16 @@
 
         <div class="cooperation__map-background">
           <noscript class="cooperation__map-wrapper">
-            <div class="cooperation__map-picture"></div>
+            <div class="cooperation__map-picture">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" srcset="images/map_desktop@1x.webp 1x, images/map_desktop@2x.webp 2x" width="1440" height="400">
+                <source media="(min-width: 768px)" type="image/webp" srcset="images/map_tablet@1x.webp 1x, images/map_tablet@2x.webp 2x" width="768" height="400">
+                <source type="image/webp" srcset="images/map_mobile@1x.webp 1x, images/map_mobile@2x.webp 2x" width="320" height="362">
+                <source media="(min-width: 1440px)" type="image/png" srcset="images/map_desktop@1x.png 1x, images/map_desktop@2x.png 2x" width="1440" height="400">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/map_tablet@1x.png 1x, images/map_tablet@2x.png 2x" width="768" height="400">
+                <img class="cooperation__map-image" src="images/map_mobile@1x.png" srcset="images/map_desktop@2x.png 2x" alt="Карта проезда к магазину." loading="lazy" width="320" height="362">
+              </picture>
+            </div>
           </noscript>
         </div>
 
