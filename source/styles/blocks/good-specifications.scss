@@ -17,6 +17,14 @@
     padding: 7px 0 4px;
     border-bottom: 1px solid $background-color-eighty;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 7px 0 5px;
+
+    &:last-child {
+      padding: 6px 0 8px;
+    }
+  }
 }
 
 .good-specifications__key {
