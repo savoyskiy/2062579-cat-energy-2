@@ -93,6 +93,14 @@
   display: block;
   object-fit: contain;
   max-width: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-height: 609px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 499px;
+  }
 }
 
 .hero__button {

@@ -66,6 +66,14 @@
   }
 }
 
+.example__description-braker {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
 .example__list {
   margin: 0 0 20px;
 

@@ -52,6 +52,7 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
+    min-height: 210px;
     margin: -81px 0 0;
     padding: 10px 25px 22px;
   }
