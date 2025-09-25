@@ -8,16 +8,17 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    padding: 25px 37px 27px;
+    padding: 26px 38px 27px;
     border-right: 1px solid $background-color-eighty;
     border-left: 1px solid $background-color-eighty;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 260px 1fr 244px;
     grid-template-rows: auto;
+    column-gap: 25px;
     align-items: center;
-    padding: 15px 0 17px;
+    padding: 15px 0 16px;
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
   }
@@ -53,11 +54,15 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #222222;
+  color: $text-color-secondary;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 257px;
   }
 }
 
@@ -74,6 +79,8 @@
   @media (min-width: $tablet-width) {
     grid-column: 2 / -1;
     grid-row: 1 / 2;
+    margin: 0 0 13px;
+    padding: 2px 0 0;
     font-size: 16px;
     line-height: 20px;
     justify-content: end;
@@ -82,15 +89,43 @@
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
-    margin: 0 40px 0 0;
+    justify-content: space-between;
+    margin: 0;
+    padding: 3px 0 0;
+  }
+}
+
+.additional-good-card__key {
+  display: block;
+  max-width: 160px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 165px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 135px;
+    max-width: none;
+    margin: 0;
+    padding: 0 0 0 40px;
+    text-align: start;
   }
 }
 
 .additional-good-card__value {
+  display: block;
+  max-width: 100px;
+  text-align: end;
+
   @media (min-width: $tablet-width) {
-    display: block;
-    width: 92px;
-    text-align: end;
+    padding: 0 2px 0 20px;
+    width: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 55px;
+    text-align: start;
   }
 }
 

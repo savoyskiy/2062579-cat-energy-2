@@ -34,11 +34,18 @@
 }
 
 .actions-and-news__header-wrapper {
+  display: inline-block;
+  max-width: 226px;
   padding: 0 40px 0 20px;
   background-color: $background-color-main;
 
   @media (min-width: $tablet-width) {
+    max-width: 301px;
     padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 376px;
   }
 
   &::after {
@@ -86,7 +93,7 @@
 .actions-and-news__form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 17px;
   margin: 0 20px;
 
   @media (min-width: $tablet-width) {
@@ -107,6 +114,7 @@
 
 .actions-and-news__email-input {
   width: 100%;
+  height: 100%;
   padding: 12px;
   box-sizing: border-box;
   font-family: $main-header;

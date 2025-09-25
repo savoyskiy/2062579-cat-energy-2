@@ -10,10 +10,44 @@
 }
 
 .good-specifications__item {
+  display: flex;
+  justify-content: space-between;
+
   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
     padding: 7px 0 4px;
     border-bottom: 1px solid $background-color-eighty;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 7px 0 5px;
+
+    &:last-child {
+      padding: 6px 0 8px;
+    }
+  }
+}
+
+.good-specifications__key {
+  max-width: 80px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 80px;
+  }
+}
+
+.good-specifications__value {
+  max-width: 50px;
+  text-align: end;
+
+  @media (min-width: $tablet-width) {
+    max-width: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 80px;
   }
 }

@@ -2,7 +2,7 @@
   padding: 0 20px 49px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px 46px;
+    padding: 0 30px 59px;
     border-bottom: 1px solid $background-color-fifty;
   }
 
@@ -37,14 +37,14 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
-    gap: 37px 137px;
+    gap: 48px 61px;
     counter-reset: item;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: min-content;
-    gap: 77px;
+    gap: 78px;
   }
 }
 
@@ -87,6 +87,8 @@
 
     @media (min-width: $tablet-width) {
       top: 40px;
+      width: 80px;
+      height: 80px;
     }
   }
 

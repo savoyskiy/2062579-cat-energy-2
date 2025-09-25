@@ -6,6 +6,10 @@
   background-color: $background-color-main;
   z-index: 1;
 
+  @media (min-width: $tablet-width) {
+    align-self: start;
+  }
+
   @media (min-width: $desktop-width) {
     background: transparent;
   }
@@ -18,12 +22,16 @@
 
   @media (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 33px;
+    width: 436px;
     font-size: 18px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 476px;
+    padding-top: 8px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -47,18 +55,31 @@
 .site-navigation__link {
   position: relative;
   display: block;
-  padding: 22px 24px 24px;
+  padding: 22px 24px 23px;
   color: inherit;
   text-decoration: none;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding: 10px 0;
+    padding: 14px 0;
+    text-align: left;
 
     &--current::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: 3px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $theme-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--current::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
       left: 0;
       right: 0;
       height: 2px;
