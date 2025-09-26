@@ -25,6 +25,7 @@
 .cooperation__text-wrapper {
   display: flex;
   justify-content: space-between;
+  min-height: 60px;
   padding: 26px 20px;
 
   @media (min-width: $tablet-width) {

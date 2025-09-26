@@ -6,7 +6,6 @@
   width: 100%;
   min-height: 164px;
   padding: 20px 20px 25px;
-  // border-bottom: 1px solid $background-color-sixty;
 
   &::after {
     content: "";
@@ -87,6 +86,24 @@
   }
 }
 
+.good-card__header {
+  margin: 0;
+  min-height: 40px;
+  font-family: $main-header;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-color-secondary;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    min-height: 48px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
 .good-card__specifications-list {
   grid-column: 2 / -1;
   grid-row: 3 / 4;
@@ -97,22 +114,6 @@
     grid-column: 1 / -1;
     grid-row: 3 / 4;
     margin-bottom: 32px;
-  }
-}
-
-.good-card__header {
-  margin: 0;
-  font-family: $main-header;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: $text-color-secondary;
-  text-transform: uppercase;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
   }
 }
 
