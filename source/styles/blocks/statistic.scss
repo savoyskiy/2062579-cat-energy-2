@@ -15,7 +15,13 @@
   }
 }
 
+.statistic__item {
+  display: flex;
+  flex-direction: column;
+}
+
 .statistic__data {
+  flex-grow: 1;
   margin: 0;
   padding: 14px 19px 17px;
   text-align: center;
