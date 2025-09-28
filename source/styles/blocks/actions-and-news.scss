@@ -128,7 +128,7 @@
     color: inherit;
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     border-color: $background-color-eighty;
   }
 

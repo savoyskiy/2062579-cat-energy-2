@@ -15,7 +15,12 @@
     background-color: $theme-color-lighter;
   }
 
-  &:active .button__text {
+  &:active:not(:disabled) .button__text {
     opacity: 30%;
+  }
+
+  &:disabled {
+    background-color: $background-color-fourty;
+    cursor: auto;
   }
 }
