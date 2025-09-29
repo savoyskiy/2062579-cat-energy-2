@@ -2,7 +2,7 @@
   padding: 0 20px 49px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px 59px;
+    padding: 0 30px 47px;
     border-bottom: 1px solid $background-color-fifty;
   }
 
@@ -14,12 +14,14 @@
 
 .how-it-works__header {
   margin: 0 0 40px;
+  min-height: 40px;
   font-family: $main-header;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
 
   @media (min-width: $tablet-width) {
+    min-height: 60px;
     margin: 0 0 32px;
     font-size: 60px;
     line-height: 60px;
@@ -37,7 +39,7 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
-    gap: 48px 61px;
+    gap: 37px 61px;
     counter-reset: item;
   }
 
@@ -118,5 +120,20 @@
       background-image: url("../../icons/stack.svg#work_clock");
       background-size: 26px;
     }
+  }
+}
+
+.how-it-works__item-text {
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 245px;
+  }
+}
+
+.how-it-works__text-braker {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }

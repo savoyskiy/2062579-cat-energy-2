@@ -25,6 +25,7 @@
 .cooperation__text-wrapper {
   display: flex;
   justify-content: space-between;
+  min-height: 60px;
   padding: 26px 20px;
 
   @media (min-width: $tablet-width) {
@@ -98,7 +99,9 @@
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   display: block;
+  width: 100%;
   background: transparent;
+  border: none;
 
   @media (min-width: $tablet-width) {
     min-height: 400px;
@@ -130,6 +133,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    container-type: size;
     background-image: image-set(url("../../images/map_desktop@2x.webp") 2x, url("../../images/map_desktop@2x.png") 2x, url("../../images/map_desktop@1x.webp") 1x, url("../../images/map_desktop@1x.png") 1x);
   }
 }
@@ -138,4 +142,10 @@
   display: block;
   object-fit: cover;
   width: 100%;
+}
+
+@container (min-height: 401px) {
+  .cooperation__map-image {
+    height: 100%;
+  }
 }

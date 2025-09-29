@@ -7,6 +7,7 @@
 }
 
 .catalog__header {
+  min-height: 36px;
   margin: 0;
   padding: 27px 20px 41px;
   font-family: $main-header;
@@ -15,6 +16,7 @@
   line-height: 36px;
 
   @media (min-width: $tablet-width) {
+    min-height: 60px;
     font-size: 60px;
     line-height: 60px;
     padding: 38px 30px 54px;

@@ -50,6 +50,7 @@
 .hero__slogan {
   margin: 0 0 29px;
   font-family: $main-header;
+  min-height: 14px;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
@@ -58,6 +59,7 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
+    min-height: 20px;
     margin: 0 0 21px;
     padding-left: 90px;
     font-size: 20px;
@@ -93,6 +95,14 @@
   display: block;
   object-fit: contain;
   max-width: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-height: 609px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 499px;
+  }
 }
 
 .hero__button {
