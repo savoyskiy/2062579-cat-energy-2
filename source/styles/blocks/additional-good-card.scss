@@ -46,6 +46,14 @@
     grid-row: 1 / -1;
     margin: 0;
   }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
 .additional-good-card__header {
