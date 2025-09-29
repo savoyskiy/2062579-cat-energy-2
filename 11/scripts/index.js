@@ -1,1 +1,0 @@
-var a=document.querySelector(".main-header__navigation"),e=document.querySelector(".main-header__button");a.classList.remove("main-header__navigation--no-js");e.classList.remove("main-header__button--no-js");e.addEventListener("click",()=>{a.classList.toggle("main-header__navigation--hidden"),e.classList.toggle("main-header__button--open")});
