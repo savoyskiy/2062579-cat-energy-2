@@ -1,3 +1,11 @@
+.programms-option {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .programms-option__header {
   margin: 0;
   padding: 27px 20px 37px;
@@ -13,7 +21,7 @@
     line-height: 60px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin: 0;
     padding: 27px 110px 55px;
   }
@@ -38,8 +46,19 @@
     line-height: 30px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
+    align-self: start;
+    margin-left: calc((100% - 1440px) / 2);
     padding: 0 110px 66px;
+  }
+}
+
+.programms-option__form {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 680px 680px;
+    column-gap: 80px;
+    justify-content: center;
   }
 }
 
@@ -47,6 +66,27 @@
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+.programms-option__cat-data {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+  }
+}
+
+.programms-option__programm-choise {
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / -1;
+  }
+}
+
+.programms-option__contacts,
+.programms-option__comment,
+.programms-option__options,
+.programms-option__button-wrapper {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+  }
 }
 
 .programms-option__button-wrapper {
