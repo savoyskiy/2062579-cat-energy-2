@@ -1,0 +1,50 @@
+.comment__legend {
+  margin: 0;
+  padding: 0 20px 38px;
+  font-family: $main-header;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 70px 87px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px 78px;
+  }
+}
+
+.comment__input {
+  display: block;
+  width: calc(100% - 40px);
+  min-height: 150px;
+  margin: 0 auto 23px;
+  padding: 14px 15px;
+  box-sizing: border-box;
+  font-family: $main-header;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid $background-color-tenty;
+  border-radius: 0;
+  color: $text-color-main;
+  resize: none;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% - 140px);
+    min-height: 175px;
+    margin: 0 auto 65px;
+    padding: 11px 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc(100% - 220px);
+    margin: 0 auto 70px;
+    padding: 9px 20px;
+  }
+}

@@ -48,3 +48,47 @@
   padding: 0;
   border: 0;
 }
+
+.programms-option__button-wrapper {
+  display: grid;
+  gap: 21px;
+  padding: 0 20px 32px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 0 70px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px 79px;
+  }
+}
+
+.programms-option__button {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 14px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.programms-option__note {
+  align-self: center;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    align-self: auto;
+    padding: 17px 0 0;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 18px 0 0;
+  }
+}
