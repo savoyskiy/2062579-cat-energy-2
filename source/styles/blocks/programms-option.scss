@@ -1,0 +1,50 @@
+.programms-option__header {
+  margin: 0;
+  padding: 27px 20px 37px;
+  font-family: $main-header;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 27px 70px 54px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 27px 110px 55px;
+  }
+}
+
+.programms-option__description {
+  display: block;
+  width: 226px;
+  min-height: 36px;
+  margin: 0;
+  padding: 0 20px 39px;
+  font-family: $main-header;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 323px;
+    min-height: 60px;
+    padding: 0 70px 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 110px 66px;
+  }
+}
+
+.programms-option__form-section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
