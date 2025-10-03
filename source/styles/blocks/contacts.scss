@@ -50,11 +50,16 @@
 
 .contacts__wrapper {
   display: flex;
+  align-items: center;
 }
 
 .contacts__text {
   min-width: max-content;
   padding: 13px 13px 14px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 13px 12px 0;
+  }
 }
 
 .contacts__input {
@@ -64,4 +69,20 @@
   padding: 13px 14px 12px;
   border: 1px solid $background-color-tenty;
   border-radius: 0;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: inherit;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 19px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &::placeholder {
+    font-size: inherit;
+    line-height: inherit;
+    text-transform: uppercase;
+  }
 }

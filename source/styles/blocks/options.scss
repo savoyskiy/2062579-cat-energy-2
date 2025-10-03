@@ -51,11 +51,8 @@
   align-items: center;
 }
 
-.options__checkbox {
-  display: none;
-}
-
 .options__visible-checkbox {
+  position: relative;
   display: block;
   margin: 0 15px 0 0;
   width: 28px;
@@ -66,5 +63,29 @@
     width: 40px;
     height: 40px;
     margin: 0 20px 0 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 26px;
+    transform: translate(-50%, -50%);
+    background-image: url("../../icons/stack.svg#tick_mobile");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../../icons/stack.svg#tick_tablet");
+    }
+  }
+}
+
+.options__checkbox {
+  display: none;
+
+  &:checked + .options__visible-checkbox::after {
+    display: block;
   }
 }
