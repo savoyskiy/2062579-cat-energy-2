@@ -53,7 +53,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 70px;
+      left: calc(-1*(100vw - 1440px));
+      width: calc(100vw - 1370px);
     }
   }
 }
