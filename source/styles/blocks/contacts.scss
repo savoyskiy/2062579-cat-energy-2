@@ -11,6 +11,8 @@
 }
 
 .contacts__legend {
+  position: relative;
+  max-width: 187px;
   margin: 0;
   padding: 26px 20px 35px;
   font-family: $main-header;
@@ -18,6 +20,10 @@
   line-height: 26px;
   font-weight: 400;
   text-transform: none;
+
+  @media (min-width: $mobile-wide-with) {
+    max-width: 514px;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 0 70px 76px;
@@ -27,6 +33,41 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 110px 76px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 100%;
+    height: 2px;
+    width: 100vw;
+    background-color: $theme-color;
+
+    @media (min-width: $tablet-width) {
+      top: 22px;
+      left: calc(100% - 30px);
+    }
+
+    @media (min-width: $desktop-width) {
+      left: calc(100% - 70px);
+    }
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background-color: $theme-color;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 70px;
+    }
   }
 }
 
