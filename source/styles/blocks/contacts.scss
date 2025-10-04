@@ -90,8 +90,45 @@
 }
 
 .contacts__wrapper {
+  position: relative;
   display: flex;
   align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: $text-color-secondary;
+
+    @media (min-width: $tablet-width) {
+      top: 16px;
+      right: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 16px;
+    }
+  }
+
+  &:has(.contacts__input:focus-visible)::after {
+    background-color: $theme-color;
+  }
+
+  &:has(.contacts__input:invalid)::after {
+    background-color: $error-color;
+  }
+
+  &--e-mail::after {
+    mask-image: url("../../icons/stack.svg#email-stroke");
+  }
+
+  &--telephone::after {
+    mask-image: url("../../icons/stack.svg#phone-stroke");
+  }
 }
 
 .contacts__text {
@@ -107,7 +144,7 @@
   flex-grow: 1;
   width: 143px;
   margin: 0;
-  padding: 13px 14px 12px;
+  padding: 13px 45px 12px 14px;
   border: 1px solid $background-color-tenty;
   border-radius: 0;
   font-family: inherit;
@@ -116,7 +153,13 @@
   color: inherit;
 
   @media (min-width: $tablet-width) {
-    padding: 10px 19px;
+    padding: 10px 52px 10px 19px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 10px 54px 10px 19px;
     font-size: 20px;
     line-height: 20px;
   }
