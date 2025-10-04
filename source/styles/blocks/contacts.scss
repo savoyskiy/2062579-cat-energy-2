@@ -126,4 +126,18 @@
     line-height: inherit;
     text-transform: uppercase;
   }
+
+  &:hover {
+    border-color: $background-color-eighty;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $outline-color-two;
+    outline-offset: -2px;
+  }
+
+  &:invalid {
+    outline: 2px solid $error-color;
+    outline-offset: -2px;
+  }
 }

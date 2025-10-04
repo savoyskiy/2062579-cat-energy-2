@@ -84,4 +84,18 @@
     margin: 0 auto 70px;
     padding: 9px 20px;
   }
+
+  &:hover {
+    border-color: $background-color-eighty;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $outline-color-two;
+    outline-offset: -2px;
+  }
+
+  &:invalid {
+    outline: 2px solid $error-color;
+    outline-offset: -2px;
+  }
 }
