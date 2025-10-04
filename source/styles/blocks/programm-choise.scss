@@ -72,9 +72,20 @@
 }
 
 .programm-choise__radio {
-  display: none;
-
   &:checked + .programm-choise__visible-radio::after {
     display: block;
+  }
+
+  &:hover + .programm-choise__visible-radio {
+    border-color: #bababa;
+  }
+
+  &:focus-visible + .programm-choise__visible-radio {
+    outline: 2px solid $outline-color;
+  }
+
+  &:active + .programm-choise__visible-radio,
+  &:active ~ .programm-choise__text {
+    opacity: 30%;
   }
 }

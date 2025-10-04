@@ -124,9 +124,20 @@
 }
 
 .options__checkbox {
-  display: none;
-
   &:checked + .options__visible-checkbox::after {
     display: block;
+  }
+
+  &:hover + .options__visible-checkbox {
+    border-color: #bababa;
+  }
+
+  &:focus-visible + .options__visible-checkbox {
+    outline: 2px solid $outline-color;
+  }
+
+  &:active + .options__visible-checkbox,
+  &:active ~ .options__text {
+    opacity: 30%;
   }
 }
