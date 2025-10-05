@@ -59,6 +59,14 @@
   @media (min-width: $desktop-width) {
     padding: 10px 0 12px;
   }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    filter: grayscale(100%);
+  }
 }
 
 .good-card__image {
@@ -83,6 +91,14 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 18px;
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
   }
 }
 
