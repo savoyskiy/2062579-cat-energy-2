@@ -37,10 +37,11 @@
 }
 
 .cat-data__text {
-  min-width: max-content;
+  max-width: 106px;
   padding: 13px 13px 14px 0;
 
   @media (min-width: $tablet-width) {
+    max-width: 212px;
     padding: 10px 13px 12px 0;
   }
 }

@@ -101,7 +101,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
     right: 12px;
     display: block;
     width: 20px;
@@ -109,7 +111,6 @@
     background-color: $text-color-secondary;
 
     @media (min-width: $tablet-width) {
-      top: 16px;
       right: 14px;
     }
 
@@ -136,10 +137,11 @@
 }
 
 .contacts__text {
-  min-width: max-content;
+  max-width: 106px;
   padding: 13px 13px 14px 0;
 
   @media (min-width: $tablet-width) {
+    max-width: 212px;
     padding: 10px 13px 12px 0;
   }
 }
