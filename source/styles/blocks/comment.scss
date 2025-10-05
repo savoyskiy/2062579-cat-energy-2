@@ -75,7 +75,7 @@
     width: calc(100% - 140px);
     min-height: 175px;
     margin: 0 auto 65px;
-    padding: 11px 20px;
+    padding: 16px 20px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -83,7 +83,7 @@
   @media (min-width: $desktop-width) {
     width: calc(100% - 220px);
     margin: 0 auto 70px;
-    padding: 9px 20px;
+    padding: 12px 20px;
   }
 
   &:hover {

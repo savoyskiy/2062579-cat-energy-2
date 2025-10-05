@@ -59,6 +59,8 @@
   color: inherit;
 
   @media (min-width: $tablet-width) {
+    min-height: 52px;
+    box-sizing: border-box;
     padding: 10px 19px;
     font-size: 20px;
     line-height: 20px;

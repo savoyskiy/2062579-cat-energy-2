@@ -19,7 +19,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px 57px;
+    padding: 0 110px 56px;
   }
 
   &::after {
@@ -85,6 +85,7 @@
   @media (min-width: $desktop-width) {
     padding: 0 110px 60px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px 77px;
   }
 }
 

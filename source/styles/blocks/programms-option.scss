@@ -16,14 +16,14 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding: 27px 70px 54px;
+    padding: 38px 70px 54px;
     font-size: 60px;
     line-height: 60px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
-    padding: 27px 110px 55px;
+    padding: 46px 110px 55px;
   }
 }
 
@@ -102,6 +102,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 110px 79px;
+    gap: 80px;
   }
 }
 
@@ -118,17 +119,17 @@
 }
 
 .programms-option__note {
-  align-self: center;
+  justify-self: center;
   font-size: 14px;
   line-height: 16px;
 
   @media (min-width: $tablet-width) {
-    align-self: auto;
-    padding: 17px 0 0;
+    place-self: auto start;
+    padding: 15px 0 0;
     font-size: 16px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 18px 0 0;
+    padding: 17px 0 0;
   }
 }

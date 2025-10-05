@@ -82,6 +82,7 @@
   color: $text-color-main;
 
   @media (min-width: $tablet-width) {
+    row-gap: 20px;
     padding: 0 70px 65px;
   }
 
@@ -102,7 +103,6 @@
     content: "";
     position: absolute;
     top: 50%;
-
     transform: translateY(-50%);
     right: 12px;
     display: block;
@@ -159,6 +159,8 @@
   color: inherit;
 
   @media (min-width: $tablet-width) {
+    min-height: 52px;
+    box-sizing: border-box;
     padding: 10px 52px 10px 19px;
     font-size: 20px;
     line-height: 20px;
