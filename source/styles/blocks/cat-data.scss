@@ -1,0 +1,88 @@
+.cat-data {
+  font-family: $main-header;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.cat-data__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0 20px 23px;
+  border-bottom: 1px solid $background-color-ninety;
+  list-style-type: none;
+  color: $text-color-main;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+    padding: 0 70px 72px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 70px 110px;
+  }
+}
+
+.cat-data__input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.cat-data__text {
+  max-width: 106px;
+  padding: 13px 13px 14px 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 212px;
+    padding: 10px 13px 12px 0;
+  }
+}
+
+.cat-data__input {
+  flex-grow: 1;
+  width: 143px;
+  margin: 0;
+  padding: 13px 14px 12px;
+  border: 1px solid $background-color-tenty;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: inherit;
+
+  @media (min-width: $tablet-width) {
+    min-height: 52px;
+    box-sizing: border-box;
+    padding: 10px 19px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &::placeholder {
+    font-size: inherit;
+    line-height: inherit;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    border-color: $background-color-eighty;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $outline-color-two;
+    outline-offset: -2px;
+  }
+
+  &:invalid {
+    outline: 2px solid $error-color;
+    outline-offset: -2px;
+  }
+}
