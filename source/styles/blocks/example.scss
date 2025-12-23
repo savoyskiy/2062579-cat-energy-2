@@ -121,6 +121,7 @@
 }
 
 .example__slider {
+  position: relative;
   justify-self: center;
   display: grid;
   grid-template-columns: 1fr;
@@ -161,10 +162,10 @@
 }
 
 .example__divider {
-  position: relative;
+  position: absolute;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  justify-self: center;
+  left: 280px;
   display: grid;
   place-items: center;
   width: 4px;
