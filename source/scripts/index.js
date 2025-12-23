@@ -15,7 +15,26 @@ mainHeaderButton.addEventListener('click', () => {
 });
 
 /* оживление слайдера до/после */
-let exampleSliderWidth = 280; // ширина блока слайдера (280 для мобильной версии)
+
+const SCREEN_WIDTH = {
+  TABLET: 768,
+  DESKTOP: 1440
+};
+const EXAMPLE_SLIDER_STYLES = {
+  DIVIDER: { // положение левого края разделителя
+    MOBILE: '138px',
+    TABLET: '278px'
+  },
+  PICTURES: { // ширина изображений
+    MOBILE: '140px',
+    TABLET: '280px'
+  },
+  SLIDER: { // ширина всего блока слайдера
+    MOBILE: 280,
+    TABLET: 560
+  }
+};
+let exampleSliderWidth = EXAMPLE_SLIDER_STYLES.SLIDER.MOBILE; // ширина блока слайдера (280 для мобильной версии)
 const exampleSlider = document.querySelector('.js-example-slider'); // блок слайдера
 const exampleBefore = exampleSlider.querySelector('.js-example-before'); // блок до
 const exampleAfter = exampleSlider.querySelector('.js-example-after'); // блок после
@@ -23,17 +42,17 @@ const exampleDivider = exampleSlider.querySelector('.js-example-divider'); // р
 let screenWidth = window.innerWidth; // ширина экрана
 
 const setSliderStyles = () => { // функция установки значения инлайн-стилей слайдера
-  if (screenWidth < 768) {
-    exampleDivider.style.left = '138px';
-    exampleBefore.style.width = '140px';
-    exampleAfter.style.width = '140px';
-    exampleSliderWidth = 280;
+  if (screenWidth < SCREEN_WIDTH.TABLET) {
+    exampleDivider.style.left = EXAMPLE_SLIDER_STYLES.DIVIDER.MOBILE;
+    exampleBefore.style.width = EXAMPLE_SLIDER_STYLES.PICTURES.MOBILE;
+    exampleAfter.style.width = EXAMPLE_SLIDER_STYLES.PICTURES.MOBILE;
+    exampleSliderWidth = EXAMPLE_SLIDER_STYLES.SLIDER.MOBILE;
   }
-  if (screenWidth >= 768) {
-    exampleDivider.style.left = '278px';
-    exampleBefore.style.width = '280px';
-    exampleAfter.style.width = '280px';
-    exampleSliderWidth = 560;
+  if (screenWidth >= SCREEN_WIDTH.TABLET) {
+    exampleDivider.style.left = EXAMPLE_SLIDER_STYLES.DIVIDER.TABLET;
+    exampleBefore.style.width = EXAMPLE_SLIDER_STYLES.PICTURES.TABLET;
+    exampleAfter.style.width = EXAMPLE_SLIDER_STYLES.PICTURES.TABLET;
+    exampleSliderWidth = EXAMPLE_SLIDER_STYLES.SLIDER.TABLET;
   }
 };
 
