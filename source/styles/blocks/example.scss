@@ -165,7 +165,7 @@
   position: absolute;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  left: 280px;
+  left: 140px;
   display: grid;
   place-items: center;
   width: 4px;
@@ -176,6 +176,7 @@
   background-color: $background-color-fourty;
 
   @media (min-width: $tablet-width) {
+    left: 280px;
     height: 512px;
   }
 
