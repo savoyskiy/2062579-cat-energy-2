@@ -34,6 +34,7 @@ const EXAMPLE_SLIDER_STYLES = {
     TABLET: 560
   }
 };
+
 let exampleSliderWidth = EXAMPLE_SLIDER_STYLES.SLIDER.MOBILE; // ширина блока слайдера (280 для мобильной версии)
 const exampleSlider = document.querySelector('.js-example-slider'); // блок слайдера
 const exampleBefore = exampleSlider.querySelector('.js-example-before'); // блок до
@@ -55,7 +56,10 @@ const setSliderStyles = () => { // функция установки значе�
     exampleSliderWidth = EXAMPLE_SLIDER_STYLES.SLIDER.TABLET;
   }
 };
-
+const CURSOR_STYLES = {
+  NORMAL: 'grab',
+  MOUSE_DOWN: 'grabbing'
+};
 setSliderStyles(); // устанавливаем инлайн-стили (необходимо так же для корректной перезагрузки страницы)
 let exampleSliderRect = exampleSlider.getBoundingClientRect(); // определяем размер блока и его координаты относительно вьюпорта
 
@@ -70,10 +74,12 @@ const onMouseMoveResizeSlider = (event) => { // функция изменени�
 };
 
 const onMouseDownStartResizeSlider = () => { // функция установки обработчика на блок слайдера
+  exampleDivider.style.cursor = CURSOR_STYLES.MOUSE_DOWN; // меняем внешний вид курсора
   exampleSlider.addEventListener('mousemove', onMouseMoveResizeSlider);
 };
 
 const onMouseUpEndResizeSlider = () => { // функция удаления обработчика на блок слайдера
+  exampleDivider.style.cursor = CURSOR_STYLES.NORMAL; // меняем внешний вид курсора обратно
   exampleSlider.removeEventListener('mousemove', onMouseMoveResizeSlider);
 };
 
