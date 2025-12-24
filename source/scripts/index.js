@@ -81,32 +81,38 @@ const onTouchMoveChangeSlider = (event) => { // функция изменени�
   changeSliderStyles(newPositionDivider); // меняем инлайн-стили
 };
 
-/* */
-const leftKey = (event) => {
-  if (exampleDivider === document.activeElement) {
-
-    if (event.key === 'ArrowLeft') {
+const onKeysDownChangeSlider = (event) => { // функция изменения слайдера стрелками на клавиатуре
+  if (exampleDivider === document.activeElement) { // работает, если разделитель в фокусе
+    if (event.key === 'ArrowLeft') { // стрелкой влево
       let newPositionDivider = parseInt(exampleDivider.style.left, 10);
-      if (newPositionDivider >= 10 && newPositionDivider <= exampleSliderWidth) {
-        exampleDivider.style.left = `${newPositionDivider - 10}px`;
-        exampleBefore.style.width = `${(newPositionDivider + 2) - 10}px`;
-        exampleAfter.style.width = `${560 - (newPositionDivider - 8)}px`; // определяем необходимую ширину картинки после
-        newPositionDivider = parseInt(exampleDivider.style.left, 10);
+      if (newPositionDivider >= 10 && newPositionDivider <= exampleSliderWidth) { // ограничиваем шириной слайдера
+        exampleDivider.style.left = `${newPositionDivider - 10}px`; // меняем позицию слайдера
+        exampleBefore.style.width = `${newPositionDivider - 8}px`; // меняем ширину картинки до
+        if (screenWidth < SCREEN_WIDTH.TABLET) {
+          exampleAfter.style.width = `${280 - (newPositionDivider - 8)}px`; // меняем ширину картинки после на мобиле
+        } else {
+          exampleAfter.style.width = `${560 - (newPositionDivider - 8)}px`; // и на планшете
+        }
+        newPositionDivider = parseInt(exampleDivider.style.left, 10); // переписываем значение позиции слайдера
       }
     }
-    if (event.key === 'ArrowRight') {
+    if (event.key === 'ArrowRight') { // стрелкой вправо
       let newPositionDivider = parseInt(exampleDivider.style.left, 10);
       if (newPositionDivider >= 0 && newPositionDivider <= exampleSliderWidth - 10) {
         exampleDivider.style.left = `${newPositionDivider + 10}px`;
-        exampleBefore.style.width = `${(newPositionDivider + 2) + 10}px`;
-        exampleAfter.style.width = `${560 - (newPositionDivider + 12)}px`; // определяем необходимую ширину картинки после
+        exampleBefore.style.width = `${newPositionDivider + 12}px`;
+        if (screenWidth < SCREEN_WIDTH.TABLET) {
+          exampleAfter.style.width = `${280 - (newPositionDivider + 12)}px`;
+        } else {
+          exampleAfter.style.width = `${560 - (newPositionDivider + 12)}px`;
+        }
         newPositionDivider = parseInt(exampleDivider.style.left, 10);
       }
     }
   }
 };
-document.addEventListener('keydown', leftKey);
-/* */
+
+document.addEventListener('keydown', onKeysDownChangeSlider); // вешаем обработчик на стрелки
 
 const onMouseDownStartChangeSlider = () => { // функция установки обработчика на блок слайдера
   exampleDivider.style.cursor = CURSOR_STYLES.MOUSE_DOWN; // меняем внешний вид курсора
