@@ -81,6 +81,33 @@ const onTouchMoveChangeSlider = (event) => { // функция изменени�
   changeSliderStyles(newPositionDivider); // меняем инлайн-стили
 };
 
+/* */
+const leftKey = (event) => {
+  if (exampleDivider === document.activeElement) {
+
+    if (event.key === 'ArrowLeft') {
+      let newPositionDivider = parseInt(exampleDivider.style.left, 10);
+      if (newPositionDivider >= 10 && newPositionDivider <= exampleSliderWidth) {
+        exampleDivider.style.left = `${newPositionDivider - 10}px`;
+        exampleBefore.style.width = `${(newPositionDivider + 2) - 10}px`;
+        exampleAfter.style.width = `${560 - (newPositionDivider - 8)}px`; // определяем необходимую ширину картинки после
+        newPositionDivider = parseInt(exampleDivider.style.left, 10);
+      }
+    }
+    if (event.key === 'ArrowRight') {
+      let newPositionDivider = parseInt(exampleDivider.style.left, 10);
+      if (newPositionDivider >= 0 && newPositionDivider <= exampleSliderWidth - 10) {
+        exampleDivider.style.left = `${newPositionDivider + 10}px`;
+        exampleBefore.style.width = `${(newPositionDivider + 2) + 10}px`;
+        exampleAfter.style.width = `${560 - (newPositionDivider + 12)}px`; // определяем необходимую ширину картинки после
+        newPositionDivider = parseInt(exampleDivider.style.left, 10);
+      }
+    }
+  }
+};
+document.addEventListener('keydown', leftKey);
+/* */
+
 const onMouseDownStartChangeSlider = () => { // функция установки обработчика на блок слайдера
   exampleDivider.style.cursor = CURSOR_STYLES.MOUSE_DOWN; // меняем внешний вид курсора
   exampleSlider.addEventListener('mousemove', onMouseMoveChangeSlider); // вешаем обработчик на мышь
