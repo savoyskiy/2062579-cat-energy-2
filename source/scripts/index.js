@@ -34,7 +34,6 @@ const EXAMPLE_SLIDER_STYLES = {
     TABLET: 560
   }
 };
-
 let exampleSliderWidth = EXAMPLE_SLIDER_STYLES.SLIDER.MOBILE; // ширина блока слайдера (280 для мобильной версии)
 const exampleSlider = document.querySelector('.js-example-slider'); // блок слайдера
 const exampleBefore = exampleSlider.querySelector('.js-example-before'); // блок до
@@ -56,15 +55,14 @@ const setSliderStyles = () => { // функция установки значе�
     exampleSliderWidth = EXAMPLE_SLIDER_STYLES.SLIDER.TABLET;
   }
 };
-const CURSOR_STYLES = {
+const CURSOR_STYLES = { // иконка курсора обычная/при нажатой мыши
   NORMAL: 'grab',
   MOUSE_DOWN: 'grabbing'
 };
 setSliderStyles(); // устанавливаем инлайн-стили (необходимо так же для корректной перезагрузки страницы)
 let exampleSliderRect = exampleSlider.getBoundingClientRect(); // определяем размер блока и его координаты относительно вьюпорта
 
-const onMouseMoveResizeSlider = (event) => { // функция изменения слайдера
-  const newPositionDivider = event.clientX - exampleSliderRect.left; // координата-Х передвинутого разделителя внутри блока
+const changeSliderStyles = (newPositionDivider) => { // функция изменения инлайн-стилей слайдера
   if (newPositionDivider >= 0 && newPositionDivider <= exampleSliderWidth) { // ограничиваем изменение сладера шириной блока
     exampleDivider.style.left = `${newPositionDivider}px`; // изменяем инлайн-значение положения разделителя
     exampleBefore.style.width = `${newPositionDivider}px`; // изменяем ширину картинки до
@@ -73,18 +71,32 @@ const onMouseMoveResizeSlider = (event) => { // функция изменени�
   }
 };
 
-const onMouseDownStartResizeSlider = () => { // функция установки обработчика на блок слайдера
+const onMouseMoveChangeSlider = (event) => { // функция изменения слайдера мышью
+  const newPositionDivider = event.clientX - exampleSliderRect.left; // координата-Х передвинутого разделителя внутри блока
+  changeSliderStyles(newPositionDivider); // меняем инлайн-стили
+};
+
+const onTouchMoveChangeSlider = (event) => { // функция изменения слайдера на тачскрине
+  const newPositionDivider = event.touches[0].clientX - exampleSliderRect.left; // координата-Х передвинутого разделителя внутри блока
+  changeSliderStyles(newPositionDivider); // меняем инлайн-стили
+};
+
+const onMouseDownStartChangeSlider = () => { // функция установки обработчика на блок слайдера
   exampleDivider.style.cursor = CURSOR_STYLES.MOUSE_DOWN; // меняем внешний вид курсора
-  exampleSlider.addEventListener('mousemove', onMouseMoveResizeSlider);
+  exampleSlider.addEventListener('mousemove', onMouseMoveChangeSlider); // вешаем обработчик на мышь
+  exampleSlider.addEventListener('touchmove', onTouchMoveChangeSlider); // вешаем обработчик на тачскрин
 };
 
-const onMouseUpEndResizeSlider = () => { // функция удаления обработчика на блок слайдера
+const onMouseUpEndChangeSlider = () => { // функция удаления обработчика на блок слайдера
   exampleDivider.style.cursor = CURSOR_STYLES.NORMAL; // меняем внешний вид курсора обратно
-  exampleSlider.removeEventListener('mousemove', onMouseMoveResizeSlider);
+  exampleSlider.removeEventListener('mousemove', onMouseMoveChangeSlider); // удаляем обработчик на мышь
+  exampleSlider.removeEventListener('touchmove', onTouchMoveChangeSlider); // удаляем обработчик на тачскрин
 };
 
-exampleDivider.addEventListener('mousedown', onMouseDownStartResizeSlider); // на нажатие мыши ставим обработчик
-exampleDivider.addEventListener('mouseup', onMouseUpEndResizeSlider); // на отпускание мыши удаляем обработчик
+exampleDivider.addEventListener('mousedown', onMouseDownStartChangeSlider); // на нажатие мыши ставим обработчик
+exampleDivider.addEventListener('touchstart', onMouseDownStartChangeSlider); // на нажатие экрана ставим обработчик
+exampleDivider.addEventListener('mouseup', onMouseUpEndChangeSlider); // на отпускание мыши удаляем обработчик
+exampleDivider.addEventListener('touchend', onMouseUpEndChangeSlider); // на отпускание экрана удаляем обработчик
 
 window.addEventListener('resize', () => { // на случай изменения размера окна переписываем:
   screenWidth = window.innerWidth; // размер экрана
