@@ -1,15 +1,12 @@
-/* в этот файл добавляет скрипты*/
-/* меню */
-const mainHeaderNavigation = document.querySelector('.main-header__navigation');
-/* кнопка меню */
-const mainHeaderButton = document.querySelector('.main-header__button');
+/* работа мобильного меню */
 
-/* реализация меню без JS */
-mainHeaderNavigation.classList.remove('main-header__navigation--no-js');
+const mainHeaderNavigation = document.querySelector('.main-header__navigation'); // меню
+const mainHeaderButton = document.querySelector('.main-header__button'); // кнопка меню
+
+mainHeaderNavigation.classList.remove('main-header__navigation--no-js'); // реализация меню без JS
 mainHeaderButton.classList.remove('main-header__button--no-js');
 
-/* открытие/закрытие меню */
-mainHeaderButton.addEventListener('click', () => {
+mainHeaderButton.addEventListener('click', () => { // открытие/закрытие меню
   mainHeaderNavigation.classList.toggle('main-header__navigation--hidden');
   mainHeaderButton.classList.toggle('main-header__button--open');
 });
@@ -34,6 +31,17 @@ const EXAMPLE_SLIDER_STYLES = {
     TABLET: 560
   }
 };
+const CURSOR_STYLES = { // иконка курсора обычная/при нажатой мыши
+  NORMAL: 'grab',
+  MOUSE_DOWN: 'grabbing'
+};
+const ARROWS_PARAMETERS = {
+  STEP: 10, // шаг изменения
+  HALF_WIDTH_DIVIDER: 2, // половина ширины разделителя
+  STEP_MINUS_HALF: 8, // шаг без половины разделителя
+  STEP_PLUS_HALF: 12, // шаг + половина разделителя
+  RADIX_PARAMETER: 10 // параметр основания для parseInt()
+};
 let exampleSliderWidth = EXAMPLE_SLIDER_STYLES.SLIDER.MOBILE; // ширина блока слайдера (280 для мобильной версии)
 const exampleSlider = document.querySelector('.js-example-slider'); // блок слайдера
 const exampleBefore = exampleSlider.querySelector('.js-example-before'); // блок до
@@ -55,10 +63,7 @@ const setSliderStyles = () => { // функция установки значе�
     exampleSliderWidth = EXAMPLE_SLIDER_STYLES.SLIDER.TABLET;
   }
 };
-const CURSOR_STYLES = { // иконка курсора обычная/при нажатой мыши
-  NORMAL: 'grab',
-  MOUSE_DOWN: 'grabbing'
-};
+
 setSliderStyles(); // устанавливаем инлайн-стили (необходимо так же для корректной перезагрузки страницы)
 let exampleSliderRect = exampleSlider.getBoundingClientRect(); // определяем размер блока и его координаты относительно вьюпорта
 
@@ -84,29 +89,29 @@ const onTouchMoveChangeSlider = (event) => { // функция изменени�
 const onKeysDownChangeSlider = (event) => { // функция изменения слайдера стрелками на клавиатуре
   if (exampleDivider === document.activeElement) { // работает, если разделитель в фокусе
     if (event.key === 'ArrowLeft') { // стрелкой влево
-      let newPositionDivider = parseInt(exampleDivider.style.left, 10);
-      if (newPositionDivider >= 10 && newPositionDivider <= exampleSliderWidth) { // ограничиваем шириной слайдера
-        exampleDivider.style.left = `${newPositionDivider - 10}px`; // меняем позицию слайдера
-        exampleBefore.style.width = `${newPositionDivider - 8}px`; // меняем ширину картинки до
+      let newPositionDivider = parseInt(exampleDivider.style.left, ARROWS_PARAMETERS.RADIX_PARAMETER);
+      if (newPositionDivider >= ARROWS_PARAMETERS.STEP && newPositionDivider <= exampleSliderWidth) { // ограничиваем шириной слайдера
+        exampleDivider.style.left = `${newPositionDivider - ARROWS_PARAMETERS.STEP}px`; // меняем позицию слайдера
+        exampleBefore.style.width = `${newPositionDivider - ARROWS_PARAMETERS.STEP_MINUS_HALF}px`; // меняем ширину картинки до
         if (screenWidth < SCREEN_WIDTH.TABLET) {
-          exampleAfter.style.width = `${280 - (newPositionDivider - 8)}px`; // меняем ширину картинки после на мобиле
+          exampleAfter.style.width = `${EXAMPLE_SLIDER_STYLES.SLIDER.MOBILE - (newPositionDivider - ARROWS_PARAMETERS.STEP_MINUS_HALF)}px`; // меняем ширину картинки после на мобиле
         } else {
-          exampleAfter.style.width = `${560 - (newPositionDivider - 8)}px`; // и на планшете
+          exampleAfter.style.width = `${EXAMPLE_SLIDER_STYLES.SLIDER.TABLET - (newPositionDivider - ARROWS_PARAMETERS.STEP_MINUS_HALF)}px`; // и на планшете
         }
-        newPositionDivider = parseInt(exampleDivider.style.left, 10); // переписываем значение позиции слайдера
+        newPositionDivider = parseInt(exampleDivider.style.left, ARROWS_PARAMETERS.RADIX_PARAMETER); // переписываем значение позиции слайдера
       }
     }
     if (event.key === 'ArrowRight') { // стрелкой вправо
-      let newPositionDivider = parseInt(exampleDivider.style.left, 10);
-      if (newPositionDivider >= 0 && newPositionDivider <= exampleSliderWidth - 10) {
-        exampleDivider.style.left = `${newPositionDivider + 10}px`;
-        exampleBefore.style.width = `${newPositionDivider + 12}px`;
+      let newPositionDivider = parseInt(exampleDivider.style.left, ARROWS_PARAMETERS.RADIX_PARAMETER);
+      if (newPositionDivider >= 0 && newPositionDivider <= exampleSliderWidth - ARROWS_PARAMETERS.STEP) {
+        exampleDivider.style.left = `${newPositionDivider + ARROWS_PARAMETERS.STEP}px`;
+        exampleBefore.style.width = `${newPositionDivider + ARROWS_PARAMETERS.STEP_PLUS_HALF}px`;
         if (screenWidth < SCREEN_WIDTH.TABLET) {
-          exampleAfter.style.width = `${280 - (newPositionDivider + 12)}px`;
+          exampleAfter.style.width = `${EXAMPLE_SLIDER_STYLES.SLIDER.MOBILE - (newPositionDivider + ARROWS_PARAMETERS.STEP_PLUS_HALF)}px`;
         } else {
-          exampleAfter.style.width = `${560 - (newPositionDivider + 12)}px`;
+          exampleAfter.style.width = `${EXAMPLE_SLIDER_STYLES.SLIDER.TABLET - (newPositionDivider + ARROWS_PARAMETERS.STEP_PLUS_HALF)}px`;
         }
-        newPositionDivider = parseInt(exampleDivider.style.left, 10);
+        newPositionDivider = parseInt(exampleDivider.style.left, ARROWS_PARAMETERS.RADIX_PARAMETER);
       }
     }
   }
