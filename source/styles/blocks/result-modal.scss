@@ -1,0 +1,24 @@
+.result-upload-form::backdrop {
+  background-color: $background-color-fourty-active;
+}
+
+.result-upload-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  font-family: $main-header;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.result-upload-form__text {
+  margin: 0;
+}
+
+.result-upload-form__close-button {
+  font-size: 20px;
+  line-height: 30px;
+  padding: 10px;
+}

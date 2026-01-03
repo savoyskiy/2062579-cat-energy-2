@@ -12,3 +12,7 @@
   background-color: $background-color-main;
   overflow-x: hidden;
 }
+
+.page__body:has(.result-upload-form[open]) {
+  overflow-y: hidden;
+}

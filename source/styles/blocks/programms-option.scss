@@ -54,6 +54,12 @@
 }
 
 .programms-option__form {
+  overflow-x: hidden;
+
+  @media (min-width: $tablet-width) {
+    overflow-x: none;
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 680px 680px;

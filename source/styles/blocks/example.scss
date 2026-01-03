@@ -122,10 +122,10 @@
 
 .example__slider {
   position: relative;
-  justify-self: center;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  margin: 0 auto;
   width: 280px;
   justify-content: center;
 
