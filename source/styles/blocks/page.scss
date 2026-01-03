@@ -13,6 +13,6 @@
   overflow-x: hidden;
 }
 
-.page__body:has(.result-upload-form[open]) {
+.page__body:has(dialog[open]) {
   overflow-y: hidden;
 }

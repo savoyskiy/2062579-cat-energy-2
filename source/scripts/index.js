@@ -150,15 +150,15 @@ if (example) {
   });
 }
 
-/* отправка формы */
-const SERVER_ADDRESS = 'https://echo.free.beeceptor.com';
+/* отправка формы подбора программ */
+const SERVER_ADDRESS = 'https://echo.htmlacademy.ru';
 const programmsForm = document.querySelector('.programms-option__form');
 const resultUploadForm = document.querySelector('.result-upload-form');
-const resultUploadFormText = resultUploadForm.querySelector('.result-upload-form__text');
-const resultUploadFormButton = resultUploadForm.querySelector('.result-upload-form__close-button');
-const programmsFormSubmitButton = programmsForm.querySelector('.programms-option__button');
 
 if (programmsForm) {
+  const resultUploadFormText = resultUploadForm.querySelector('.result-upload-form__text');
+  const resultUploadFormButton = resultUploadForm.querySelector('.result-upload-form__close-button');
+  const programmsFormSubmitButton = programmsForm.querySelector('.programms-option__button');
   const uploadFormData = (formData) => fetch(
     SERVER_ADDRESS,
     {
@@ -211,4 +211,66 @@ if (programmsForm) {
 
   resultUploadFormButton.addEventListener('click', onResultButtonClick);
   programmsForm.addEventListener('submit', setFormData);
+}
+
+/* отправка формы подписки */
+const subscriptionForm = document.querySelector('.actions-and-news__form');
+
+if (subscriptionForm) {
+  const subscriptionFormButton = subscriptionForm.querySelector('.actions-and-news__button');
+  const subscriptionFormButtonText = subscriptionFormButton.querySelector('span');
+  const subscriptionResult = document.querySelector('.subscription-result');
+  const subscriptionResultText = subscriptionResult.querySelector('.subscription-result__text');
+  const subscriptionResultButton = subscriptionResult.querySelector('.subscription-result__button');
+
+  const uploadSubscriptionFormData = (formData) => fetch(
+    SERVER_ADDRESS,
+    {
+      method: 'POST',
+      body: formData
+    }
+  );
+
+  const disableSubscriptionFormButton = () => {
+    subscriptionFormButton.disabled = true;
+    subscriptionFormButtonText.textContent = 'Подписываемся';
+  };
+
+  const undisableSubscriptionFormButton = () => {
+    subscriptionFormButton.disabled = false;
+    subscriptionFormButtonText.textContent = 'Подписаться';
+  };
+
+  const onSubmitSubscriptionForm = (event) => {
+    event.preventDefault();
+    disableSubscriptionFormButton();
+    const formData = new FormData(event.target);
+
+    uploadSubscriptionFormData(formData)
+      .then(
+        (responce) => {
+          if (!responce.ok) {
+            throw new Error;
+          }
+          subscriptionForm.reset();
+          subscriptionResultText.textContent = 'Вы успешно подписались';
+        }
+      )
+      .catch(
+        () => {
+          subscriptionResultText.textContent = 'Не получилось. Попробуйте еще раз';
+        }
+      )
+      .finally(
+        () => {
+          undisableSubscriptionFormButton();
+          subscriptionResult.showModal();
+        }
+      );
+  };
+
+  subscriptionResultButton.addEventListener('click', () => {
+    subscriptionResult.close();
+  });
+  subscriptionForm.addEventListener('submit', onSubmitSubscriptionForm);
 }

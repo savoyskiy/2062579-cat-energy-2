@@ -1,13 +1,13 @@
-.result-upload-form {
+.subscription-result {
   padding: 0;
   border-color: $theme-color;
 }
 
-.result-upload-form::backdrop {
+.subscription-result::backdrop {
   background-color: $background-color-fourty-active;
 }
 
-.result-upload-form__wrapper {
+.subscription-result__wrapper {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -18,11 +18,11 @@
   text-transform: uppercase;
 }
 
-.result-upload-form__text {
+.subscription-result__text {
   margin: 0;
 }
 
-.result-upload-form__close-button {
+.subscription-result__button {
   font-size: 20px;
   line-height: 30px;
   padding: 10px;
