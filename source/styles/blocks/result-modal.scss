@@ -10,12 +10,18 @@
 .result-upload-form__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 30px;
+  gap: 20px;
+  padding: 20px;
   font-family: $main-header;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .result-upload-form__text {
@@ -23,7 +29,12 @@
 }
 
 .result-upload-form__close-button {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
   padding: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

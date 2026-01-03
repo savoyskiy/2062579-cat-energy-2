@@ -171,6 +171,14 @@ if (programmsForm) {
     resultUploadForm.close();
   };
 
+  const onClickBackdrop = (evt) => {
+    const isClickonBackdrop = evt.target === evt.currentTarget;
+
+    if (isClickonBackdrop) {
+      resultUploadForm.close();
+    }
+  };
+
   const blockSubmitButton = () => {
     programmsFormSubmitButton.textContent = 'Заявка отправляется';
     programmsFormSubmitButton.disabled = true;
@@ -209,6 +217,7 @@ if (programmsForm) {
       );
   };
 
+  resultUploadForm.addEventListener('click', onClickBackdrop);
   resultUploadFormButton.addEventListener('click', onResultButtonClick);
   programmsForm.addEventListener('submit', setFormData);
 }
@@ -241,6 +250,14 @@ if (subscriptionForm) {
     subscriptionFormButtonText.textContent = 'Подписаться';
   };
 
+  const onClickBackdrop = ({ target, currentTarget }) => {
+    const isClickonBackdrop = target === currentTarget;
+
+    if (isClickonBackdrop) {
+      subscriptionResult.close();
+    }
+  };
+
   const onSubmitSubscriptionForm = (event) => {
     event.preventDefault();
     disableSubscriptionFormButton();
@@ -269,6 +286,7 @@ if (subscriptionForm) {
       );
   };
 
+  subscriptionResult.addEventListener('click', onClickBackdrop);
   subscriptionResultButton.addEventListener('click', () => {
     subscriptionResult.close();
   });
