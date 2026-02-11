@@ -57,7 +57,7 @@
   overflow-x: hidden;
 
   @media (min-width: $tablet-width) {
-    overflow-x: none;
+    overflow-x: initial;
   }
 
   @media (min-width: $desktop-width) {
