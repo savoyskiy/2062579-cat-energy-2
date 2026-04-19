@@ -81,7 +81,7 @@
     outline-offset: -2px;
   }
 
-  &:invalid {
+  &:user-invalid {
     outline: 2px solid $error-color;
     outline-offset: -2px;
   }

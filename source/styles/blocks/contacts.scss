@@ -123,7 +123,7 @@
     background-color: $theme-color;
   }
 
-  &:has(.contacts__input:invalid)::after {
+  &:has(.contacts__input:user-invalid)::after {
     background-color: $error-color;
   }
 
@@ -187,7 +187,7 @@
     outline-offset: -2px;
   }
 
-  &:invalid {
+  &:user-invalid {
     outline: 2px solid $error-color;
     outline-offset: -2px;
   }
