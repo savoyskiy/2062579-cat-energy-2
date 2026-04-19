@@ -152,14 +152,15 @@ if (example) {
 
 /* отправка формы подбора программ */
 const SERVER_ADDRESS = 'https://echo.htmlacademy.ru';
-const programmsForm = document.querySelector('.programms-option__form');
-const resultUploadForm = document.querySelector('.result-upload-form');
+const programmsForm = document.querySelector('.programms-option__form'); // форма
+const resultUploadForm = document.querySelector('.result-upload-form'); // модалка с результатом
 
 if (programmsForm) {
-  const resultUploadFormText = resultUploadForm.querySelector('.result-upload-form__text');
-  const resultUploadFormButton = resultUploadForm.querySelector('.result-upload-form__close-button');
-  const programmsFormSubmitButton = programmsForm.querySelector('.programms-option__button');
-  const uploadFormData = (formData) => fetch(
+  const resultUploadFormText = resultUploadForm.querySelector('.result-upload-form__text'); // текст сообщения в модалке
+  const resultUploadFormButton = resultUploadForm.querySelector('.result-upload-form__close-button'); // кнопка закрытия модалки
+  const programmsFormSubmitButton = programmsForm.querySelector('.programms-option__button'); // кнопка отправки формы
+
+  const uploadFormData = (formData) => fetch( // функция отправки данных формы на сервер
     SERVER_ADDRESS,
     {
       method: 'POST',
@@ -167,11 +168,11 @@ if (programmsForm) {
     }
   );
 
-  const onResultButtonClick = () => {
+  const onResultButtonClick = () => { // закрытие модалки по кнопке
     resultUploadForm.close();
   };
 
-  const onClickBackdrop = (evt) => {
+  const onClickBackdrop = (evt) => { // закрытие модалки по клику вне модалки
     const isClickonBackdrop = evt.target === evt.currentTarget;
 
     if (isClickonBackdrop) {
@@ -179,47 +180,47 @@ if (programmsForm) {
     }
   };
 
-  const blockSubmitButton = () => {
+  const blockSubmitButton = () => { // блокировка кнокпки отправки формы на время отправки
     programmsFormSubmitButton.textContent = 'Заявка отправляется';
     programmsFormSubmitButton.disabled = true;
   };
 
-  const unblockSubmitButton = () => {
+  const unblockSubmitButton = () => { // отмена блокировки кнокпки отправки формы после отправки
     programmsFormSubmitButton.textContent = 'Отправить заявку';
     programmsFormSubmitButton.disabled = false;
   };
 
   const setFormData = (evt) => {
-    evt.preventDefault();
-    blockSubmitButton();
-    const formData = new FormData(evt.target);
+    evt.preventDefault(); // отмена действия по умолчанию
+    blockSubmitButton(); // блокировка кнопки
+    const formData = new FormData(evt.target); // создаем новый объект формы
 
-    uploadFormData(formData)
-      .then(
+    uploadFormData(formData) // отправляем данные на сервер
+      .then( // если получен ответ от сервера
         (responce) => {
-          if (!responce.ok) {
-            throw new Error;
+          if (!responce.ok) { // если ответ не ок
+            throw new Error; // проуидываем ошибку
           }
-          programmsForm.reset();
-          resultUploadFormText.textContent = 'Данные успешно отправлены';
+          programmsForm.reset(); // сбрасываем поля формы
+          resultUploadFormText.textContent = 'Данные успешно отправлены'; // меняем текст в модалке на успешный
         }
       )
-      .catch(
+      .catch( // если не получен ответ от сервера
         () => {
           resultUploadFormText.textContent = 'Произошла ошибка при отправке данных';
         }
       )
-      .finally(
+      .finally( // в любом случае
         () => {
-          resultUploadForm.showModal();
-          unblockSubmitButton();
+          resultUploadForm.showModal(); // показываем окно сообщения
+          unblockSubmitButton(); // снимаем блокировку с кнопки
         }
       );
   };
 
-  resultUploadForm.addEventListener('click', onClickBackdrop);
-  resultUploadFormButton.addEventListener('click', onResultButtonClick);
-  programmsForm.addEventListener('submit', setFormData);
+  resultUploadForm.addEventListener('click', onClickBackdrop); // установка обработчика на клик вне модалки
+  resultUploadFormButton.addEventListener('click', onResultButtonClick); // установка обработчика на клик по кнопке модалки
+  programmsForm.addEventListener('submit', setFormData); // установка обработчика на форму
 }
 
 /* отправка формы подписки */
