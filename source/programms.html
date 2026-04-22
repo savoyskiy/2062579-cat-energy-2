@@ -52,65 +52,69 @@
     <p class="programms-option__description container">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
     <form class="programms-option__form" action="https://echo.htmlacademy.ru" method="post">
-      <fieldset class="programms-option__form-section programms-option__cat-data cat-data">
-        <legend class="cat-data__legend visually-hidden">Данные кота</legend>
+      <div class="programms-option__form-section-wrapper container-wider">
+        <fieldset class="programms-option__form-section programms-option__cat-data cat-data">
+          <legend class="cat-data__legend visually-hidden">Данные кота</legend>
 
-        <ul class="cat-data__list">
-          <li class="cat-data__item">
-            <label class="cat-data__input-wrapper" for="cat-name">
-              <span class="cat-data__text label">Имя:*</span>
-              <input class="cat-data__input input" id="cat-name" type="text" name="cat-name" placeholder="барсик" required>
-            </label>
-          </li>
+          <ul class="cat-data__list">
+            <li class="cat-data__item">
+              <label class="cat-data__input-wrapper" for="cat-name">
+                <span class="cat-data__text label">Имя:*</span>
+                <input class="cat-data__input input" id="cat-name" type="text" name="cat-name" placeholder="барсик" required>
+              </label>
+            </li>
 
-          <li class="cat-data__item">
-            <label class="cat-data__input-wrapper" for="cat-weight">
-              <span class="cat-data__text label">Вес (кг):*</span>
-              <input class="cat-data__input input" id="cat-weight" type="text" name="cat-weight" placeholder="7" required>
-            </label>
-          </li>
+            <li class="cat-data__item">
+              <label class="cat-data__input-wrapper" for="cat-weight">
+                <span class="cat-data__text label">Вес (кг):*</span>
+                <input class="cat-data__input input" id="cat-weight" type="text" name="cat-weight" placeholder="7" required>
+              </label>
+            </li>
 
-          <li class="cat-data__item">
-            <label class="cat-data__input-wrapper" for="cat-age">
-              <span class="cat-data__text label">Возраст (лет):</span>
-              <input class="cat-data__input input" id="cat-age" type="text" name="cat-age" placeholder="7">
-            </label>
-          </li>
-        </ul>
-      </fieldset>
+            <li class="cat-data__item">
+              <label class="cat-data__input-wrapper" for="cat-age">
+                <span class="cat-data__text label">Возраст (лет):</span>
+                <input class="cat-data__input input" id="cat-age" type="text" name="cat-age" placeholder="7">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
 
-      <fieldset class="programms-option__form-section programms-option__programm-choise programm-choise">
-        <legend class="programm-choise__legend visually-hidden">Выбор программы</legend>
+        <fieldset class="programms-option__form-section programms-option__programm-choise programm-choise">
+          <legend class="programm-choise__legend visually-hidden">Выбор программы</legend>
 
-        <ul class="programm-choise__list">
-          <li class="programm-choise__item">
-            <label class="programm-choise__wrapper" for="slim">
-              <input class="programm-choise__radio radio visually-hidden" id="slim" type="radio" name="programm-choise" value="slim" checked>
-              <span class="programm-choise__visible-radio"></span>
-              <span class="programm-choise__text label">Похудение</span>
-            </label>
-          </li>
+          <ul class="programm-choise__list">
+            <li class="programm-choise__item">
+              <label class="programm-choise__wrapper" for="slim">
+                <input class="programm-choise__radio radio visually-hidden" id="slim" type="radio" name="programm-choise" value="slim" checked>
+                <span class="programm-choise__visible-radio"></span>
+                <span class="programm-choise__text label">Похудение</span>
+              </label>
+            </li>
 
-          <li class="programm-choise__item">
-            <label class="programm-choise__wrapper" for="pro">
-              <input class="programm-choise__radio radio visually-hidden" id="pro" type="radio" name="programm-choise" value="pro">
-              <span class="programm-choise__visible-radio"></span>
-              <span class="programm-choise__text label">Набор массы</span>
-            </label>
-          </li>
+            <li class="programm-choise__item">
+              <label class="programm-choise__wrapper" for="pro">
+                <input class="programm-choise__radio radio visually-hidden" id="pro" type="radio" name="programm-choise" value="pro">
+                <span class="programm-choise__visible-radio"></span>
+                <span class="programm-choise__text label">Набор массы</span>
+              </label>
+            </li>
 
-          <li class="programm-choise__item">
-            <label class="programm-choise__wrapper" for="need-help">
-              <input class="programm-choise__radio radio visually-hidden" id="need-help" type="radio" name="programm-choise" value="need-help">
-              <span class="programm-choise__visible-radio"></span>
-              <span class="programm-choise__text label">Не знаю (Нужен ваш совет)</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
+            <li class="programm-choise__item">
+              <label class="programm-choise__wrapper" for="need-help">
+                <input class="programm-choise__radio radio visually-hidden" id="need-help" type="radio" name="programm-choise" value="need-help">
+                <span class="programm-choise__visible-radio"></span>
+                <span class="programm-choise__text label">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
 
-      <fieldset class="programms-option__form-section programms-option__contacts contacts">
-        <legend class="contacts__legend">Контактные данные (владельца кота)</legend>
+      <fieldset class="programms-option__form-section programms-option__contacts contacts container-wider">
+        <legend class="contacts__legend">
+          <span class="contacts__legend-wrapper">Контактные данные (владельца кота)</span>
+        </legend>
 
         <ul class="contacts__list">
           <li class="contacts__item">
@@ -129,14 +133,18 @@
         </ul>
       </fieldset>
 
-      <fieldset class="programms-option__form-section programms-option__comment comment">
-        <legend class="comment__legend">Комментарий</legend>
+      <fieldset class="programms-option__form-section programms-option__comment comment container-wider">
+        <legend class="comment__legend">
+          <span class="comment__legend-wrapper">Комментарий</span>
+        </legend>
 
         <textarea class="comment__input" name="comment" id="comment">Расскажите обо всех повадках кота</textarea>
       </fieldset>
 
-      <fieldset class="programms-option__form-section programms-option__options options">
-        <legend class="options__legend">Дополнительно</legend>
+      <fieldset class="programms-option__form-section programms-option__options options container-wider">
+        <legend class="options__legend">
+          <span class="options__legend-wrapper">Дополнительно</span>
+        </legend>
 
         <ul class="options__list">
           <li class="options__item">
@@ -173,7 +181,7 @@
         </ul>
       </fieldset>
 
-      <div class="programms-option__button-wrapper">
+      <div class="programms-option__button-wrapper container">
         <button class="programms-option__button button" type="submit">
           <span class="button__text">Отправить заявку</span>
         </button>

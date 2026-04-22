@@ -1,4 +1,10 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+
+html,
+body {
+  scrollbar-gutter: stable;
+}
+
 .container {
   @media (min-width: $desktop-width) {
     width: 1220px;

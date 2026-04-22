@@ -2,7 +2,6 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -59,12 +58,12 @@
   @media (min-width: $tablet-width) {
     overflow-x: initial;
   }
+}
 
+.programms-option__form-section-wrapper {
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 680px 680px;
+    display: flex;
     column-gap: 80px;
-    justify-content: center;
   }
 }
 
@@ -76,13 +75,13 @@
 
 .programms-option__cat-data {
   @media (min-width: $desktop-width) {
-    grid-column: 1 / 2;
+    width: 680px;
   }
 }
 
 .programms-option__programm-choise {
   @media (min-width: $desktop-width) {
-    grid-column: 2 / -1;
+    width: 680px;
   }
 }
 
@@ -91,7 +90,7 @@
 .programms-option__options,
 .programms-option__button-wrapper {
   @media (min-width: $desktop-width) {
-    grid-column: 1 / -1;
+    margin: 0 auto;
   }
 }
 
