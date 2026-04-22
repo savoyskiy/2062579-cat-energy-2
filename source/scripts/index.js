@@ -1,3 +1,5 @@
+import IMask from 'imask'; // импорт бибилиотеки для маски в поле ввода
+
 /* работа мобильного меню */
 
 const mainHeaderNavigation = document.querySelector('.main-header__navigation'); // меню
@@ -150,15 +152,29 @@ if (example) {
   });
 }
 
-/* отправка формы подбора программ */
+/* форма подбора программ */
+
 const SERVER_ADDRESS = 'https://echo.htmlacademy.ru';
 const programmsForm = document.querySelector('.programms-option__form'); // форма
 const resultUploadForm = document.querySelector('.result-upload-form'); // модалка с результатом
 
 if (programmsForm) {
+  const telephoneInput = programmsForm.querySelector('#telephone'); // поле ввода телефонного номера
   const resultUploadFormText = resultUploadForm.querySelector('.result-upload-form__text'); // текст сообщения в модалке
   const resultUploadFormButton = resultUploadForm.querySelector('.result-upload-form__close-button'); // кнопка закрытия модалки
   const programmsFormSubmitButton = programmsForm.querySelector('.programms-option__button'); // кнопка отправки формы
+
+  const telephoneMask = IMask(telephoneInput, { // маска в поле номера телефона
+    mask: '{8} (000) 000-00-00',
+    lazy: true
+  });
+
+  telephoneInput.addEventListener('focus', () => { // показываем маску если поле в фокусе
+    telephoneMask.updateOptions({lazy: false});
+  }, true);
+  telephoneInput.addEventListener('blur', () => { // убираем маску если поле не в фокусе
+    telephoneMask.updateOptions({lazy: true});
+  }, true);
 
   const uploadFormData = (formData) => fetch( // функция отправки данных формы на сервер
     SERVER_ADDRESS,
@@ -194,6 +210,7 @@ if (programmsForm) {
     evt.preventDefault(); // отмена действия по умолчанию
     blockSubmitButton(); // блокировка кнопки
     const formData = new FormData(evt.target); // создаем новый объект формы
+    formData.set('telephone', telephoneMask.unmaskedValue); // меняем значение поля телефона на значение без маски
 
     uploadFormData(formData) // отправляем данные на сервер
       .then( // если получен ответ от сервера
@@ -212,6 +229,7 @@ if (programmsForm) {
       )
       .finally( // в любом случае
         () => {
+          telephoneMask.value = ''; // очищаем значение в маске теелфонного номера
           resultUploadForm.showModal(); // показываем окно сообщения
           unblockSubmitButton(); // снимаем блокировку с кнопки
         }
@@ -224,6 +242,7 @@ if (programmsForm) {
 }
 
 /* отправка формы подписки */
+
 const subscriptionForm = document.querySelector('.actions-and-news__form');
 
 if (subscriptionForm) {
