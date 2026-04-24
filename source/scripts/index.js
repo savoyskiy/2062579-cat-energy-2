@@ -1,4 +1,4 @@
-import IMask from 'imask'; // импорт бибилиотеки для маски в поле ввода
+// import IMask from 'imask'; // импорт бибилиотеки для маски в поле ввода
 
 /* работа мобильного меню */
 
@@ -166,7 +166,7 @@ if (programmsForm) {
   const resultUploadFormButton = resultUploadForm.querySelector('.result-upload-form__close-button'); // кнопка закрытия модалки
   const programmsFormSubmitButton = programmsForm.querySelector('.programms-option__button'); // кнопка отправки формы
 
-  const telephoneMask = IMask(telephoneInput, { // маска в поле номера телефона
+  const telephoneMask = new IMask(telephoneInput, { // маска в поле номера телефона
     mask: '{8} (000) 000-00-00',
     lazy: true
   });
