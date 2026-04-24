@@ -109,6 +109,7 @@
 }
 
 .actions-and-news__email-label {
+  position: relative;
   flex-grow: 1;
 }
 
@@ -145,6 +146,12 @@
   }
 }
 
+.actions-and-news__email-label--invalid .actions-and-news__email-input {
+  border-color: $error-color;
+  outline: 2px solid $error-color;
+  outline-offset: -2px;
+}
+
 .actions-and-news__button {
   padding: 15px;
   font-size: 20px;
@@ -152,5 +159,24 @@
 
   @media (min-width: $tablet-width) {
     width: 256px;
+  }
+}
+
+.actions-and-news__error-message-text {
+  position: absolute;
+  bottom: -11px;
+  right: 0;
+  margin: 0;
+  font-size: 10px;
+  line-height: 12px;
+  font-family: $main-header;
+  text-transform: uppercase;
+  color: $error-color;
+
+  @media (min-width: $tablet-width) {
+    bottom: -17px;
+    right: 2px;
+    font-size: 12px;
+    line-height: 18px;
   }
 }

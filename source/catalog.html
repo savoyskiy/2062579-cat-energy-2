@@ -10,6 +10,7 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple_180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <script src="vendor/pristine.min.js" defer></script>
   <script src="scripts/index.js" defer></script>
   <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -364,7 +365,7 @@
 
       <form class="actions-and-news__form" action="https://echo.htmlacademy.ru" method="post">
         <label class="actions-and-news__email-label" for="email-input">
-          <input class="actions-and-news__email-input" id="email-input" name="email" type="email" placeholder="кuklachev@gmail.com" required>
+          <input class="actions-and-news__email-input" id="email-input" name="email" autocomplete="email" type="email" placeholder="кuklachev@gmail.com" required data-pristine-required-message=" " data-pristine-email-message=" ">
         </label>
         <button class="actions-and-news__button button" type="submit">
           <span class="button__text">Подписаться</span>

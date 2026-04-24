@@ -155,11 +155,13 @@ if (example) {
 /* форма подбора программ */
 
 const SERVER_ADDRESS = 'https://echo.htmlacademy.ru';
+const EMAIL_RULES = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // правило ввода email
 const programmsForm = document.querySelector('.programms-option__form'); // форма
 const resultUploadForm = document.querySelector('.result-upload-form'); // модалка с результатом
 
 if (programmsForm) {
   const telephoneInput = programmsForm.querySelector('#telephone'); // поле ввода телефонного номера
+  const emailInput = programmsForm.querySelector('#e-mail'); // поле ввода e-mail
   const resultUploadFormText = resultUploadForm.querySelector('.result-upload-form__text'); // текст сообщения в модалке
   const resultUploadFormButton = resultUploadForm.querySelector('.result-upload-form__close-button'); // кнопка закрытия модалки
   const programmsFormSubmitButton = programmsForm.querySelector('.programms-option__button'); // кнопка отправки формы
@@ -175,6 +177,25 @@ if (programmsForm) {
   telephoneInput.addEventListener('blur', () => { // убираем маску если поле не в фокусе
     telephoneMask.updateOptions({lazy: true});
   }, true);
+
+  const pristine = new Pristine(programmsForm, {
+    classTo: 'contacts__wrapper',
+    errorClass: 'contacts__wrapper--invalid',
+    errorTextParent: 'contacts__wrapper',
+    errorTextTag: 'p',
+    errorTextClass: 'contacts__error-message-text'
+  });
+
+  const telephoneErrorText = 'Введите номер полностью'; // текст об ошибке при вводе теелфона
+  const validateTelephone = () => telephoneMask.masked.isComplete; // ф-я проверки полноты ввода телефона
+  const pristineValidateTelephone = () => pristine.addValidator(telephoneInput, validateTelephone, telephoneErrorText); // ф-я валидации ввода телефона
+
+  const emailErrorText = 'Формат: имя@сервер.домен'; // сообщение об ошибке при вводе е-мейл
+  const validateEmail = () => EMAIL_RULES.test(emailInput.value); // ф-я проверки ввода е-мейл
+  const pristineValidateEmail = () => pristine.addValidator(emailInput, validateEmail, emailErrorText); // ф-я валидации ввода е-мейл
+
+  pristineValidateTelephone(); // валидация ввода телефоннного номера
+  pristineValidateEmail(); // валидация ввода е-мейл
 
   const uploadFormData = (formData) => fetch( // функция отправки данных формы на сервер
     SERVER_ADDRESS,
@@ -208,32 +229,36 @@ if (programmsForm) {
 
   const setFormData = (evt) => {
     evt.preventDefault(); // отмена действия по умолчанию
-    blockSubmitButton(); // блокировка кнопки
-    const formData = new FormData(evt.target); // создаем новый объект формы
-    formData.set('telephone', telephoneMask.unmaskedValue); // меняем значение поля телефона на значение без маски
+    const isValid = pristine.validate();
 
-    uploadFormData(formData) // отправляем данные на сервер
-      .then( // если получен ответ от сервера
-        (responce) => {
-          if (!responce.ok) { // если ответ не ок
-            throw new Error; // проуидываем ошибку
+    if(isValid) {
+      blockSubmitButton(); // блокировка кнопки
+      const formData = new FormData(evt.target); // создаем новый объект формы
+      formData.set('telephone', telephoneMask.unmaskedValue); // меняем значение поля телефона на значение без маски
+
+      uploadFormData(formData) // отправляем данные на сервер
+        .then( // если получен ответ от сервера
+          (responce) => {
+            if (!responce.ok) { // если ответ не ок
+              throw new Error; // проуидываем ошибку
+            }
+            programmsForm.reset(); // сбрасываем поля формы
+            resultUploadFormText.textContent = 'Данные успешно отправлены'; // меняем текст в модалке на успешный
           }
-          programmsForm.reset(); // сбрасываем поля формы
-          resultUploadFormText.textContent = 'Данные успешно отправлены'; // меняем текст в модалке на успешный
-        }
-      )
-      .catch( // если не получен ответ от сервера
-        () => {
-          resultUploadFormText.textContent = 'Произошла ошибка при отправке данных';
-        }
-      )
-      .finally( // в любом случае
-        () => {
-          telephoneMask.value = ''; // очищаем значение в маске теелфонного номера
-          resultUploadForm.showModal(); // показываем окно сообщения
-          unblockSubmitButton(); // снимаем блокировку с кнопки
-        }
-      );
+        )
+        .catch( // если не получен ответ от сервера
+          () => {
+            resultUploadFormText.textContent = 'Произошла ошибка при отправке данных';
+          }
+        )
+        .finally( // в любом случае
+          () => {
+            telephoneMask.value = ''; // очищаем значение в маске теелфонного номера
+            resultUploadForm.showModal(); // показываем окно сообщения
+            unblockSubmitButton(); // снимаем блокировку с кнопки
+          }
+        );
+    }
   };
 
   resultUploadForm.addEventListener('click', onClickBackdrop); // установка обработчика на клик вне модалки
@@ -246,11 +271,26 @@ if (programmsForm) {
 const subscriptionForm = document.querySelector('.actions-and-news__form');
 
 if (subscriptionForm) {
+  const subscriptionsEmailInput = subscriptionForm.querySelector('.actions-and-news__email-input');
   const subscriptionFormButton = subscriptionForm.querySelector('.actions-and-news__button');
   const subscriptionFormButtonText = subscriptionFormButton.querySelector('span');
   const subscriptionResult = document.querySelector('.subscription-result');
   const subscriptionResultText = subscriptionResult.querySelector('.subscription-result__text');
   const subscriptionResultButton = subscriptionResult.querySelector('.subscription-result__button');
+
+  const pristineSubscription = new Pristine(subscriptionForm, {
+    classTo: 'actions-and-news__email-label',
+    errorClass: 'actions-and-news__email-label--invalid',
+    errorTextParent: 'actions-and-news__email-label',
+    errorTextTag: 'p',
+    errorTextClass: 'actions-and-news__error-message-text'
+  });
+
+  const subscriotionErrorText = 'Формат: имя@сервер.домен'; // сообщение об ошибке при вводе е-мейл
+  const validateEmail = () => EMAIL_RULES.test(subscriptionsEmailInput.value); // ф-я проверки ввода е-мейл
+  const pristineValidateSubscription = () => pristineSubscription.addValidator(subscriptionsEmailInput, validateEmail, subscriotionErrorText); // ф-я валидации ввода е-мейл для подписки
+
+  pristineValidateSubscription(); // валидация поля подписки
 
   const uploadSubscriptionFormData = (formData) => fetch(
     SERVER_ADDRESS,
@@ -280,30 +320,34 @@ if (subscriptionForm) {
 
   const onSubmitSubscriptionForm = (event) => {
     event.preventDefault();
-    disableSubscriptionFormButton();
-    const formData = new FormData(event.target);
+    const isValid = pristineSubscription.validate();
 
-    uploadSubscriptionFormData(formData)
-      .then(
-        (responce) => {
-          if (!responce.ok) {
-            throw new Error;
+    if(isValid) {
+      disableSubscriptionFormButton();
+      const formData = new FormData(event.target);
+
+      uploadSubscriptionFormData(formData)
+        .then(
+          (responce) => {
+            if (!responce.ok) {
+              throw new Error;
+            }
+            subscriptionForm.reset();
+            subscriptionResultText.textContent = 'Вы успешно подписались';
           }
-          subscriptionForm.reset();
-          subscriptionResultText.textContent = 'Вы успешно подписались';
-        }
-      )
-      .catch(
-        () => {
-          subscriptionResultText.textContent = 'Не получилось. Попробуйте еще раз';
-        }
-      )
-      .finally(
-        () => {
-          undisableSubscriptionFormButton();
-          subscriptionResult.showModal();
-        }
-      );
+        )
+        .catch(
+          () => {
+            subscriptionResultText.textContent = 'Не получилось. Попробуйте еще раз';
+          }
+        )
+        .finally(
+          () => {
+            undisableSubscriptionFormButton();
+            subscriptionResult.showModal();
+          }
+        );
+    }
   };
 
   subscriptionResult.addEventListener('click', onClickBackdrop);
