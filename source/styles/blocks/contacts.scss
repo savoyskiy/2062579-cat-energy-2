@@ -13,6 +13,33 @@
   }
 }
 
+.contacts__legend {
+  display: inline-block;
+  max-width: 227px;
+  margin: 0;
+  padding: 26px 20px 35px 0;
+  font-family: $main-header;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  text-transform: none;
+
+  @media (min-width: $mobile-wide-with) {
+    max-width: 384px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 594px;
+    padding: 0 30px 76px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 70px 76px;
+  }
+}
+
 .contacts__legend-wrapper {
   display: block;
   padding: 0 20px;
@@ -36,32 +63,6 @@
     @media (min-width: $tablet-width) {
       top: 22px;
     }
-  }
-}
-
-.contacts__legend {
-  max-width: 227px;
-  margin: 0;
-  padding: 26px 20px 35px 0;
-  font-family: $main-header;
-  font-size: 24px;
-  line-height: 26px;
-  font-weight: 400;
-  text-transform: none;
-
-  @media (min-width: $mobile-wide-with) {
-    max-width: 514px;
-  }
-
-  @media (min-width: $tablet-width) {
-    max-width: 594px;
-    padding: 0 30px 76px;
-    font-size: 36px;
-    line-height: 36px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0 70px 76px;
   }
 }
 

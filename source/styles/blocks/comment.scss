@@ -2,6 +2,29 @@
   position: relative;
 }
 
+.comment__legend {
+  display: inline-block;
+  max-width: 160px;
+  margin: 0;
+  padding: 0 0 38px;
+  font-family: $main-header;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    max-width: 514px;
+    padding: 0 30px 87px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 594px;
+    padding: 0 70px 78px;
+  }
+}
+
 .comment__legend-wrapper {
   display: block;
   padding: 0 20px;
@@ -25,28 +48,6 @@
     @media (min-width: $tablet-width) {
       top: 22px;
     }
-  }
-}
-
-.comment__legend {
-  max-width: 160px;
-  margin: 0;
-  padding: 0 0 38px;
-  font-family: $main-header;
-  font-size: 24px;
-  line-height: 26px;
-  font-weight: 400;
-
-  @media (min-width: $tablet-width) {
-    max-width: 514px;
-    padding: 0 30px 87px;
-    font-size: 36px;
-    line-height: 36px;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 594px;
-    padding: 0 70px 78px;
   }
 }
 
